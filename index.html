@@ -4,11 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CÔNG TY CP TM & SX AN HƯNG - INOX AN HƯNG</title>
+<title>INOX AN HƯNG - Gia Công Inox Theo Yêu Cầu</title>
 
-<meta name="description" content="Inox An Hưng - Gia công inox theo yêu cầu. Bàn ghế, kệ, lan can, khung, sản phẩm cơ khí inox chất lượng cao.">
-
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 body{
@@ -34,13 +32,14 @@ padding:20px;
 }
 
 .hero h1{
-font-size:48px;
+font-size:52px;
 margin-bottom:10px;
 }
 
 .hero p{
 max-width:800px;
 font-size:18px;
+margin:auto;
 }
 
 .btn{
@@ -50,8 +49,13 @@ padding:14px 30px;
 background:#ff6b00;
 color:#fff;
 text-decoration:none;
-border-radius:8px;
+border-radius:10px;
 font-weight:700;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
 }
 
 /* SECTION */
@@ -63,7 +67,7 @@ margin:auto;
 
 .title{
 text-align:center;
-font-size:34px;
+font-size:36px;
 margin-bottom:40px;
 }
 
@@ -77,10 +81,16 @@ gap:20px;
 .card{
 padding:25px;
 border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:0.3s;
 }
 
-/* IMAGE */
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
+
+/* GALLERY */
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -102,35 +112,54 @@ border:0;
 border-radius:12px;
 }
 
-/* FLOAT */
+/* FLOAT ICON */
 .floating{
 position:fixed;
 right:20px;
 bottom:20px;
 display:flex;
 flex-direction:column;
-gap:12px;
+gap:14px;
 z-index:999;
 }
 
 .float-btn{
-width:60px;
-height:60px;
+width:62px;
+height:62px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-color:white;
-text-decoration:none;
-font-size:22px;
-box-shadow:0 4px 15px rgba(0,0,0,.3);
-animation:pulse 2s infinite;
+background:white;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+position:relative;
+overflow:hidden;
 }
 
-.phone{background:#28a745; animation:shake .8s infinite;}
-.zalo{background:#0068ff;}
-.messenger{background:#0084ff;}
-.facebook{background:#1877f2;}
+.float-btn img{
+width:65%;
+height:65%;
+object-fit:contain;
+}
+
+/* PHONE RING */
+.phone{
+animation:shake .8s infinite;
+background:#eafff0;
+}
+
+.ring{
+position:absolute;
+width:100%;
+height:100%;
+border-radius:50%;
+border:2px solid #28a745;
+animation:ring 1.5s infinite;
+}
+
+.zalo{animation:shake 1.1s infinite;background:#eaf2ff;}
+.messenger{background:#eaf3ff;}
+.facebook{background:#eaf0ff;}
 
 footer{
 background:#111;
@@ -139,6 +168,7 @@ text-align:center;
 padding:25px;
 }
 
+/* ANIMATION */
 @keyframes shake{
 0%{transform:translate(0,0)}
 25%{transform:translate(2px,-2px)}
@@ -147,14 +177,14 @@ padding:25px;
 100%{transform:translate(0,0)}
 }
 
-@keyframes pulse{
-0%{transform:scale(1)}
-70%{transform:scale(1.1)}
-100%{transform:scale(1)}
+@keyframes ring{
+0%{transform:scale(1);opacity:1}
+100%{transform:scale(1.8);opacity:0}
 }
 
+/* RESPONSIVE */
 @media(max-width:768px){
-.hero h1{font-size:32px;}
+.hero h1{font-size:34px;}
 }
 </style>
 </head>
@@ -164,25 +194,25 @@ padding:25px;
 <!-- HERO -->
 <div class="hero">
 <div>
-<h1>CÔNG TY CP TM & SX AN HƯNG</h1>
-<p>INOX AN HƯNG - Gia công inox theo kích thước & yêu cầu. Bàn ghế, kệ, lan can, khung, cơ khí inox chất lượng cao.</p>
+<h1>INOX AN HƯNG</h1>
+<p>Công ty CP TM & SX An Hưng - Gia công inox theo yêu cầu: bàn ghế, kệ, lan can, khung, cơ khí inox chất lượng cao.</p>
 <a href="#lienhe" class="btn">NHẬN BÁO GIÁ NGAY</a>
 </div>
 </div>
 
 <!-- SERVICES -->
 <section>
-<h2 class="title">DỊCH VỤ GIA CÔNG INOX</h2>
+<h2 class="title">DỊCH VỤ GIA CÔNG</h2>
 
 <div class="grid">
-<div class="card">✔ Gia công inox theo yêu cầu</div>
-<div class="card">✔ Sản xuất bàn ghế – kệ inox</div>
+<div class="card">✔ Gia công inox 201 / 304</div>
+<div class="card">✔ Bàn ghế – kệ – tủ inox</div>
 <div class="card">✔ Lan can – cầu thang inox</div>
-<div class="card">✔ Khung cơ khí – thiết bị inox</div>
+<div class="card">✔ Thiết kế theo bản vẽ</div>
 </div>
 </section>
 
-<!-- PRODUCT IMAGES -->
+<!-- GALLERY -->
 <section>
 <h2 class="title">SẢN PHẨM THỰC TẾ</h2>
 
@@ -196,12 +226,10 @@ padding:25px;
 
 <!-- MAP -->
 <section id="lienhe">
-<h2 class="title">ĐỊA CHỈ XƯỞNG</h2>
+<h2 class="title">VỊ TRÍ XƯỞNG</h2>
 
-<iframe 
-class="map"
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8089!2d105.7603972!3d19.8216588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3136f757c2442f8b%3A0xeafa4f00f7cab3ef!2sInox%20An%20H%C6%B0ng%20%E2%80%93%20Gia%20C%C3%B4ng%20Inox!5e0!3m2!1svi!2s!4v0000000000"
-allowfullscreen="">
+<iframe class="map"
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8089!2d105.7603972!3d19.8216588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3136f757c2442f8b%3A0xeafa4f00f7cab3ef!2sInox%20An%20H%C6%B0ng%20%E2%80%93%20Gia%20C%C3%B4ng%20Inox!5e0!3m2!1svi!2s!4v0000000000">
 </iframe>
 
 </section>
@@ -210,17 +238,26 @@ allowfullscreen="">
 © 2026 CÔNG TY CP TM & SX AN HƯNG - INOX AN HƯNG
 </footer>
 
-<!-- FLOAT BUTTONS -->
+<!-- FLOAT ICONS -->
 <div class="floating">
 
-<a href="tel:0967721996" class="float-btn phone">📞</a>
+<a href="tel:0967721996" class="float-btn phone">
+<span class="ring"></span>
+<img src="icons/phone.png">
+</a>
 
 <a href="
-https://zalo.me/4076776927681495659" target="_blank" class="float-btn zalo">Z</a>
+https://zalo.me/4076776927681495659" target="_blank" class="float-btn zalo">
+<img src="icons/zalo.png">
+</a>
 
-<a href="https://m.me/inoxanhungthanhhoa" target="_blank" class="float-btn messenger">M</a>
+<a href="https://m.me/inoxanhugth" target="_blank" class="float-btn messenger">
+<img src="icons/messenger.png">
+</a>
 
-<a href="https://facebook.com/inoxanhungthanhhoa" target="_blank" class="float-btn facebook">f</a>
+<a href="https://facebook.com/inoxanhugth" target="_blank" class="float-btn facebook">
+<img src="icons/facebook.png">
+</a>
 
 </div>
 
