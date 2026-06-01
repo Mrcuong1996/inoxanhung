@@ -106,7 +106,6 @@ body{font-family:Arial;margin:0;background:#f5f5f5}
 
 <script>
 const data=[
-{name:'Nắp bể 400x400',img:'1.jpg',price:1300000,old:1700000,type:'500'},
 {name:'Nắp bể 500x500',img:'2.jpg',price:1500000,old:2000000,type:'500'},
 {name:'Nắp bể 600x600',img:'3.jpg',price:1700000,old:2200000,type:'1000'},
 {name:'Nắp bể 700x700',img:'4.jpg',price:2000000,old:2600000,type:'2000'},
@@ -116,19 +115,49 @@ const data=[
 ];
 
 function render(list){
-const html=list.map(p=>`<div class="product">
-<div class="discount">-25%</div>
-<img src="${p.img}">
-<p>${p.name}</p>
-<div class="price">${p.price.toLocaleString()}đ</div>
-<div class="old-price">${p.old.toLocaleString()}đ</div>
-<a href="tel:0976036631" class="buy-btn">GỌI NGAY</a>
-</div>`).join('');
-document.getElementById('products').innerHTML=html}
+const html=list.map(p=>`
+<div class="product">
 
-function filter(type){if(type==='all')return render(data);render(data.filter(p=>p.type===type))}
-function callNow(){window.location.href='tel:0976036631'}
-render(data)
+<div class="discount">-25%</div>
+
+<img src="${p.img}">
+
+<p>${p.name}</p>
+
+<div class="info">
+    <div class="price">${p.price.toLocaleString()}đ</div>
+    <div class="old-price">${p.old.toLocaleString()}đ</div>
+</div>
+
+<a href="tel:0976036631" class="buy-btn">
+    📞 GỌI NGAY
+</a>
+
+</div>
+`).join('');
+
+document.getElementById('products').innerHTML=html
+}
+  .product{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.info{
+    margin: 8px 0;
+}
+
+.buy-btn{
+    margin-top: auto;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: #ff6600;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+}
 </script>
 
 </body>
