@@ -18,6 +18,23 @@ body{font-family:Arial;margin:0;background:#f5f5f5}
 
 .tabs{display:flex;justify-content:center;background:#e60000;padding:10px;flex-wrap:wrap}
 .tabs button{background:#fff;border:none;margin:5px;padding:10px 15px;font-weight:bold;cursor:pointer;border-radius:5px}
+  
+.tabs2{
+  grid-column: 1/-1; /* QUAN TRỌNG: chiếm full hàng trong grid */
+  text-align:center;
+  margin:20px 0;
+}
+
+.tabs2 button{
+  background:#ff6600;
+  border:none;
+  padding:10px 20px;
+  margin:5px;
+  color:#fff;
+  font-weight:bold;
+  border-radius:5px;
+  cursor:pointer;
+}
 
 .product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:20px}
 .product{background:#fff;padding:10px;border-radius:10px;text-align:center;position:relative;transition:.3s}
@@ -116,7 +133,7 @@ const data=[
 {name:'Nắp bể 500x500',img:'8.jpg',price:1800000,old:1900000,type:'1000'},
 {name:'Nắp bể 600x600',img:'9.jpg',price:2025000,old:2250000,type:'1000'},
 {name:'Nắp bể 700x700',img:'10.jpg',price:2385000,old:2650000,type:'1000'},
-{name:'Nắp bể 800x800',img:'11.jpg',price:27455000,old:3050000,type:'1000'},
+{name:'Nắp bể 800x800',img:'11.jpg',price:2745500,old:3050000,type:'1000'},
 {name:'Nắp bể 900x900',img:'12.jpg',price:2970000,old:3300000,type:'1000'},
 {name:'Nắp bể 1000x1000',img:'13.jpg',price:3591000,old:3990000,type:'1000'}
 ];
@@ -160,6 +177,7 @@ if(el){
   el.scrollIntoView({behavior:'smooth'});
 }
 }
+render(data);
 </script>
   
 
