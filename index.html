@@ -10,86 +10,207 @@ body{font-family:Arial;margin:0;background:#f5f5f5}
 .container{max-width:1200px;margin:auto}
 
 .header{background:#c40000;color:#fff;padding:15px;text-align:center;font-size:22px;font-weight:bold}
-.sub-header{background:#fff;text-align:center;padding:10px;font-size:14px}
 
 /* banner */
 .banner{max-width:1200px;margin:10px auto}
 .banner img{width:100%;border-radius:10px}
 
-.tabs{display:flex;justify-content:center;background:#e60000;padding:10px;flex-wrap:wrap}
-.tabs button{background:#fff;border:none;margin:5px;padding:10px 15px;font-weight:bold;cursor:pointer;border-radius:5px}
-  
-.tabs2{
-  grid-column: 1/-1; /* QUAN TRỌNG: chiếm full hàng trong grid */
+/* sản phẩm */
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  padding:20px;
+}
+
+.product{
+  background:#fff;
+  padding:10px;
+  border-radius:10px;
   text-align:center;
-  margin:20px 0;
+  position:relative;
+  transition:.3s;
 }
 
-.tabs2 button{
-  background:#ff6600;
-  border:none;
-  padding:10px 20px;
-  margin:5px;
-  color:#fff;
-  font-weight:bold;
-  border-radius:5px;
-  cursor:pointer;
+.product:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,.2)
 }
 
-.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:20px}
-.product{background:#fff;padding:10px;border-radius:10px;text-align:center;position:relative;transition:.3s}
-.product:hover{transform:translateY(-6px);box-shadow:0 10px 25px rgba(0,0,0,.2)}
 .product img{width:100%}
-.discount{position:absolute;top:10px;right:10px;background:red;color:#fff;padding:5px;border-radius:50%;font-size:12px}
+
+.discount{
+  position:absolute;
+  top:10px;
+  right:10px;
+  background:red;
+  color:#fff;
+  padding:5px;
+  border-radius:50%;
+  font-size:12px
+}
+
 .price{color:red;font-weight:bold}
 .old-price{text-decoration:line-through;color:gray}
-.buy-btn{margin-top:10px;background:#ff6600;border:none;padding:10px;color:#fff;font-weight:bold;cursor:pointer;border-radius:5px}
 
-/* hiệu ứng rung + sóng */
-@keyframes ring{0%{transform:rotate(0)}25%{transform:rotate(10deg)}50%{transform:rotate(-10deg)}75%{transform:rotate(6deg)}100%{transform:rotate(0)}}
-@keyframes wave{0%{box-shadow:0 0 0 0 rgba(255,0,0,.6)}70%{box-shadow:0 0 0 15px rgba(255,0,0,0)}100%{box-shadow:0 0 0 0 rgba(255,0,0,0)}}
-.call-btn{position:fixed;bottom:20px;right:20px;background:red;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;animation:ring .6s infinite, wave 1.5s infinite}
+.buy-btn{
+  margin-top:10px;
+  background:#ff6600;
+  border:none;
+  padding:10px;
+  color:#fff;
+  font-weight:bold;
+  cursor:pointer;
+  border-radius:5px
+}
 
-.social{position:fixed;right:20px;top:40%;display:flex;flex-direction:column;gap:10px}
-.social img{width:45px;height:45px;border-radius:50%;animation:ring .8s infinite}
+/* tiêu đề phân đoạn */
+.section-title{
+  grid-column:1/-1;
+  text-align:center;
+  margin:40px 0 20px;
+  position:relative;
+}
 
-.footer-top{background:#c40000;color:#fff;display:flex;justify-content:space-around;padding:15px;font-weight:bold;flex-wrap:wrap;text-align:center}
+.section-title span{
+  background:#f5f5f5;
+  padding:10px 20px;
+  font-size:18px;
+  font-weight:bold;
+  color:#c40000;
+  position:relative;
+  z-index:2;
+}
+
+.section-title::before{
+  content:'';
+  position:absolute;
+  top:50%;
+  left:0;
+  width:100%;
+  height:2px;
+  background:#ddd;
+  z-index:1;
+}
+
+/* ICON SOCIAL */
+.social{
+  position:fixed;
+  right:20px;
+  top:40%;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.icon{
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+
+.icon img{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+}
+
+/* text hover */
+.icon span{
+  position:absolute;
+  right:55px;
+  background:#000;
+  color:#fff;
+  padding:6px 10px;
+  border-radius:5px;
+  white-space:nowrap;
+  opacity:0;
+  transform:translateX(10px);
+  transition:.3s;
+  font-size:13px;
+}
+
+/* hover */
+.icon:hover span{
+  opacity:1;
+  transform:translateX(0);
+}
+
+/* màu từng icon */
+.icon:nth-child(1) span{background:red;}
+.icon:nth-child(2) span{background:#0aa545;}
+.icon:nth-child(3) span{background:#0084ff;}
+.icon:nth-child(4) span{background:#1877f2;}
+
+.icon span::after{
+  content:'';
+  position:absolute;
+  right:-5px;
+  top:50%;
+  transform:translateY(-50%);
+  border:5px solid transparent;
+  border-left-color:inherit;
+}
+
+/* footer */
+.footer-top{
+  background:#c40000;
+  color:#fff;
+  display:flex;
+  justify-content:space-around;
+  padding:15px;
+  font-weight:bold;
+  flex-wrap:wrap;
+  text-align:center
+}
+
 .footer{background:#eee;padding:30px}
-.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px
+}
+
 .footer h4{color:#0b4aa2}
 .map iframe{width:100%;height:250px;border:0}
+
 </style>
 </head>
 
 <body>
 
-<div class="header">CÔNG TY CỔ PHẦN THƯƠNG MẠI & SẢN XUẤT AN HƯNG</div>
+<div class="header">CÔNG TY CỔ PHẦN TM & SX AN HƯNG</div>
 
 <div class="banner">
-<!-- thay link ảnh banner từ github của bạn -->
 <img src="BANNER.jpg">
 </div>
-
-<div class="tabs">
-<button onclick="filter('all')">TẤT CẢ</button>
-<button onclick="filter('500')">500KG</button>
-<button onclick="filter('1000')">1000KG</button>
-</div>
-
-<div id="product-list" class="product-list"></div>
 
 <div class="container">
 <div class="product-grid" id="products"></div>
 </div>
 
-<!-- icon mạng xã hội -->
+<!-- ICON -->
 <div class="social">
-<a href="tel:0976036631"><img src="phone.png"></a>
-<a href="#"><img src="zalo.png"></a>
-<a href="#"><img src="messenger.png"></a>
-<a href="#"><img src="facebook.png"></a>
+  <a href="tel:0976036631" class="icon">
+    <img src="phone.png">
+    <span>GỌI NGAY</span>
+  </a>
+
+  <a href="#" class="icon">
+    <img src="zalo.png">
+    <span>CHAT ZALO</span>
+  </a>
+
+  <a href="#" class="icon">
+    <img src="messenger.png">
+    <span>NHẮN TIN</span>
+  </a>
+
+  <a href="#" class="icon">
+    <img src="facebook.png">
+    <span>FACEBOOK</span>
+  </a>
 </div>
-  
 
 <div class="footer-top">
 <div>HOTLINE: 0976036631</div>
@@ -103,8 +224,8 @@ body{font-family:Arial;margin:0;background:#f5f5f5}
 <div>
 <h4>THÔNG TIN CÔNG TY</h4>
 <p>Công ty CP TM & SX An Hưng</p>
-<p>Địa chỉ: Lô 10 KCN Tây Bắc Ga - Đông Thọ - TP Thanh Hóa</p>
-<p>Điện thoại: 0976036631</p>
+<p>Thanh Hóa</p>
+<p>0976036631</p>
 </div>
 
 <div>
@@ -116,7 +237,7 @@ body{font-family:Arial;margin:0;background:#f5f5f5}
 
 <div class="map">
 <h4>BẢN ĐỒ</h4>
-<iframe src="https://www.google.com/maps?q=19.8216857,105.7604043&hl=vi&z=16&output=embed"></iframe>
+<iframe src="https://www.google.com/maps?q=19.8216857,105.7604043&z=16&output=embed"></iframe>
 </div>
 
 </div>
@@ -130,38 +251,17 @@ const data=[
 {name:'Nắp bể 800x800',img:'800.png',price:1935000,old:2150000,type:'500'},
 {name:'Nắp bể 900x900',img:'900.png',price:2160000,old:2400000,type:'500'},
 {name:'Nắp bể 1000x1000',img:'1000.png',price:2610000,old:2900000,type:'500'},
+
 {name:'Nắp bể 500x500',img:'8.jpg',price:1800000,old:1900000,type:'1000'},
 {name:'Nắp bể 600x600',img:'9.jpg',price:2025000,old:2250000,type:'1000'},
 {name:'Nắp bể 700x700',img:'10.jpg',price:2385000,old:2650000,type:'1000'},
-{name:'Nắp bể 800x800',img:'11.jpg',price:2745500,old:3050000,type:'1000'},
+{name:'Nắp bể 800x800',img:'11.jpg',price:2745000,old:3050000,type:'1000'},
 {name:'Nắp bể 900x900',img:'12.jpg',price:2970000,old:3300000,type:'1000'},
 {name:'Nắp bể 1000x1000',img:'13.jpg',price:3591000,old:3990000,type:'1000'}
 ];
 
-function render(list){
-
-const group500 = list.filter(p=>p.type==='500');
-const group1000 = list.filter(p=>p.type==='1000');
-
-// HTML sản phẩm
-const html500 = group500.map(p=>productHTML(p)).join('');
-const html1000 = group1000.map(p=>productHTML(p)).join('');
-
-// MENU nằm giữa
-const tabs2 = `
-<div class="tabs2">
-  <button onclick="scrollToType('500')">NẮP BỂ 500KG</button>
-  <button onclick="scrollToType('1000')">NẮP BỂ 1000KG</button>
-</div>
-`;
-
-// render ra
-document.getElementById('products').innerHTML =
-  html500 + tabs2 + html1000;
-}
-
-  function productHTML(p){
-return `<div class="product" data-type="${p.type}">
+function productHTML(p){
+return `<div class="product">
 <div class="discount">-10%</div>
 <img src="${p.img}">
 <p>${p.name}</p>
@@ -171,15 +271,26 @@ return `<div class="product" data-type="${p.type}">
 </div>`;
 }
 
-  function scrollToType(type){
-const el = document.querySelector(`.product[data-type="${type}"]`);
-if(el){
-  el.scrollIntoView({behavior:'smooth'});
+function render(){
+const group500 = data.filter(p=>p.type==='500');
+const group1000 = data.filter(p=>p.type==='1000');
+
+const html500 = group500.map(productHTML).join('');
+const html1000 = group1000.map(productHTML).join('');
+
+document.getElementById('products').innerHTML =
+`<div class="section-title"><span>NẮP BỂ 500KG</span></div>` +
+html500 +
+`<div class="section-title"><span>NẮP BỂ 1000KG</span></div>` +
+html1000;
 }
+
+function callNow(){
+window.location.href='tel:0976036631';
 }
-render(data);
+
+render();
 </script>
-  
 
 </body>
 </html>
