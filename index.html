@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WALPRO STORE</title>
+<title>INOX AN HƯNG</title>
 
 <style>
 body{
@@ -14,12 +14,17 @@ body{
 
 /* HEADER */
 .header{
-    background:#d40000;
+    background:#b30000;
     color:#fff;
     padding:15px;
     text-align:center;
-    font-weight:bold;
-    font-size:20px;
+}
+.header h1{
+    margin:0;
+    font-size:22px;
+}
+.header p{
+    margin:5px 0 0;
 }
 
 /* SLIDER */
@@ -57,6 +62,7 @@ body{
     margin-right:10px;
     text-decoration:none;
     border-radius:5px;
+    font-weight:bold;
 }
 
 /* FEATURES */
@@ -65,6 +71,7 @@ body{
     justify-content:space-around;
     background:#fff;
     padding:15px;
+    font-weight:bold;
 }
 
 /* PRODUCTS */
@@ -88,10 +95,10 @@ body{
     width:100%;
     height:200px;
     object-fit:cover;
-    transition:0.3s;
+    transition:0.4s;
 }
 .product:hover img{
-    transform:scale(1.1);
+    transform:scale(1.15); /* ZOOM */
 }
 .product-info{
     padding:10px;
@@ -115,7 +122,6 @@ body{
 }
 .popup img{
     max-width:80%;
-    max-height:80%;
 }
 
 /* FLOAT BUTTON */
@@ -169,18 +175,29 @@ body{
 
 /* FOOTER */
 .footer{
-    background:#d40000;
+    background:#111;
     color:#fff;
-    text-align:center;
-    padding:20px;
+    padding:30px;
+}
+.footer h3{
+    margin-top:0;
+}
+.map{
+    width:100%;
+    height:300px;
+    margin-top:10px;
+    border:none;
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <div class="header">
-WALPRO STORE - NẮP BỂ ÂM SÀN INOX 304
+    <h1>CÔNG TY CP TM & SX AN HƯNG</h1>
+    <p>INOX AN HƯNG - GIA CÔNG THEO YÊU CẦU</p>
+    <p>📞 0976 036 631</p>
 </div>
 
 <!-- SLIDER -->
@@ -192,44 +209,34 @@ WALPRO STORE - NẮP BỂ ÂM SÀN INOX 304
     </div>
 
     <div class="cta">
-        <a href="tel:0976529518">📞 Gọi ngay</a>
-        <a href="#">Mua ngay</a>
+        <a href="tel:0976036631">📞 Gọi ngay</a>
+        <a href="https://zalo.me/0976036631">Zalo</a>
     </div>
 </div>
 
 <!-- FEATURES -->
 <div class="features">
     <div>🚚 Giao toàn quốc</div>
-    <div>✅ Inox 304</div>
-    <div>🔧 Bảo hành</div>
+    <div>🏭 Gia công theo yêu cầu</div>
+    <div>✅ Inox 304 cao cấp</div>
 </div>
 
 <!-- PRODUCTS -->
 <div class="products">
 
-    <div class="product" onclick="showImg(this)">
-        <img src="1.jpg">
-        <div class="product-info">
-            <h3>Nắp bể 50x50</h3>
-            <p class="price">1.590.000đ</p>
-        </div>
+<script>
+for(let i=1;i<=18;i++){
+document.write(`
+<div class="product" onclick="showImg(this)">
+    <img src="${i}.jpg">
+    <div class="product-info">
+        <h3>Nắp bể mẫu ${i}</h3>
+        <p class="price">Liên hệ</p>
     </div>
-
-    <div class="product" onclick="showImg(this)">
-        <img src="2.jpg">
-        <div class="product-info">
-            <h3>Nắp bể 60x60</h3>
-            <p class="price">2.070.000đ</p>
-        </div>
-    </div>
-
-    <div class="product" onclick="showImg(this)">
-        <img src="3.jpg">
-        <div class="product-info">
-            <h3>Nắp bể 70x70</h3>
-            <p class="price">2.550.000đ</p>
-        </div>
-    </div>
+</div>
+`)
+}
+</script>
 
 </div>
 
@@ -238,25 +245,32 @@ WALPRO STORE - NẮP BỂ ÂM SÀN INOX 304
     <img id="popupImg">
 </div>
 
-<!-- FLOAT -->
-<a href="tel:0976529518" class="float-btn call">
+<!-- FLOAT BUTTON -->
+<a href="tel:0976036631" class="float-btn call">
     <img src="phone.png">
 </a>
 
-<a href="https://zalo.me/0976529518" class="float-btn zalo">
+<a href="https://zalo.me/0976036631" class="float-btn zalo">
     <img src="zalo.png">
 </a>
 
-<a href="#" class="float-btn messenger">
+<a href="https://m.me/" class="float-btn messenger">
     <img src="messenger.png">
 </a>
 
-<a href="#" class="float-btn facebook">
+<a href="https://facebook.com/" class="float-btn facebook">
     <img src="facebook.png">
 </a>
 
+<!-- FOOTER -->
 <div class="footer">
-Hotline: 0976.529.518
+    <h3>CÔNG TY CP TM & SX AN HƯNG</h3>
+    <p>Địa chỉ: Lô 10 KCN Tây Bắc Ga - P. Đông Thọ - TP Thanh Hóa</p>
+    <p>Hotline: 0976 036 631</p>
+
+    <iframe class="map"
+    src="https://www.google.com/maps?q=19.8216857,105.7604043&hl=vi&z=16&output=embed">
+    </iframe>
 </div>
 
 <script>
