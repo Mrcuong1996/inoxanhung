@@ -47,7 +47,6 @@ body{font-family:Arial;margin:0;background:#f5f5f5}
 <body>
 
 <div class="header">CÔNG TY CỔ PHẦN THƯƠNG MẠI & SẢN XUẤT AN HƯNG</div>
-<div class="sub-header">INOX AN HƯNG - GIA CÔNG THEO YÊU CẦU | Hotline: 0976036631</div>
 
 <div class="banner">
 <!-- thay link ảnh banner từ github của bạn -->
@@ -58,7 +57,6 @@ body{font-family:Arial;margin:0;background:#f5f5f5}
 <button onclick="filter('all')">TẤT CẢ</button>
 <button onclick="filter('500')">500KG</button>
 <button onclick="filter('1000')">1000KG</button>
-<button onclick="filter('2000')">2000KG</button>
 </div>
 
 <div class="container">
@@ -124,7 +122,7 @@ const html=list.map(p=>`<div class="product">
 <p>${p.name}</p>
 <div class="price">${p.price.toLocaleString()}đ</div>
 <div class="old-price">${p.old.toLocaleString()}đ</div>
-<button class="buy-btn" onclick="callNow()">GỌI NGAY</button>
+<a href="tel:0976036631" class="buy-btn">GỌI NGAY</a>
 </div>`).join('');
 document.getElementById('products').innerHTML=html}
 
