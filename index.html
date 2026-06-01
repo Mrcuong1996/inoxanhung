@@ -3,202 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>INOX AN HƯNG</title>
+<title>Inox An Hưng</title>
 
 <style>
-body{
-    font-family: Arial;
-    margin:0;
-    background:#f5f5f5;
-}
+body{font-family:Arial;margin:0;background:#f5f5f5}
+.container{max-width:1200px;margin:auto}
 
-/* HEADER */
-header{
-    background:#d40000;
-    color:#fff;
-    padding:15px;
-    text-align:center;
-    font-weight:bold;
-}
+.header{background:#c40000;color:#fff;padding:15px;text-align:center;font-size:22px;font-weight:bold}
+.sub-header{background:#fff;text-align:center;padding:10px;font-size:14px}
 
-/* MENU */
-.menu{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    background:#fff;
-    padding:10px;
-}
-.menu button{
-    background:#d40000;
-    color:#fff;
-    border:none;
-    padding:10px 15px;
-    cursor:pointer;
-}
+/* banner */
+.banner{max-width:1200px;margin:10px auto}
+.banner img{width:100%;border-radius:10px}
 
-/* BANNER */
-.banner img{
-    width:100%;
-    max-height:350px;
-    object-fit:cover;
-}
+.tabs{display:flex;justify-content:center;background:#e60000;padding:10px;flex-wrap:wrap}
+.tabs button{background:#fff;border:none;margin:5px;padding:10px 15px;font-weight:bold;cursor:pointer;border-radius:5px}
 
-/* PRODUCT */
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:20px;
-}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:20px}
+.product{background:#fff;padding:10px;border-radius:10px;text-align:center;position:relative;transition:.3s}
+.product:hover{transform:translateY(-6px);box-shadow:0 10px 25px rgba(0,0,0,.2)}
+.product img{width:100%}
+.discount{position:absolute;top:10px;right:10px;background:red;color:#fff;padding:5px;border-radius:50%;font-size:12px}
+.price{color:red;font-weight:bold}
+.old-price{text-decoration:line-through;color:gray}
+.buy-btn{margin-top:10px;background:#ff6600;border:none;padding:10px;color:#fff;font-weight:bold;cursor:pointer;border-radius:5px}
 
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
+/* hiệu ứng rung + sóng */
+@keyframes ring{0%{transform:rotate(0)}25%{transform:rotate(10deg)}50%{transform:rotate(-10deg)}75%{transform:rotate(6deg)}100%{transform:rotate(0)}}
+@keyframes wave{0%{box-shadow:0 0 0 0 rgba(255,0,0,.6)}70%{box-shadow:0 0 0 15px rgba(255,0,0,0)}100%{box-shadow:0 0 0 0 rgba(255,0,0,0)}}
+.call-btn{position:fixed;bottom:20px;right:20px;background:red;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;animation:ring .6s infinite, wave 1.5s infinite}
 
-.product{
-    background:#fff;
-    padding:10px;
-    border-radius:8px;
-    position:relative;
-    text-align:center;
-    transition:0.3s;
-}
-.product:hover{
-    transform:translateY(-5px);
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
+.social{position:fixed;right:20px;top:40%;display:flex;flex-direction:column;gap:10px}
+.social img{width:45px;height:45px;border-radius:50%;animation:ring .8s infinite}
 
-.product img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-}
-
-/* DISCOUNT */
-.discount{
-    position:absolute;
-    top:10px;
-    right:10px;
-    background:red;
-    color:#fff;
-    padding:5px;
-    border-radius:50%;
-}
-
-/* PRICE */
-.price{
-    color:red;
-    font-weight:bold;
-    font-size:18px;
-}
-.old{
-    text-decoration:line-through;
-    color:#999;
-}
-
-/* BUTTON CALL */
-.buy-btn{
-    display:block;
-    margin-top:10px;
-    background:red;
-    color:#fff;
-    padding:10px;
-    text-decoration:none;
-    border-radius:5px;
-    animation:shake 1s infinite;
-}
-
-/* RUNG */
-@keyframes shake{
-    0%{transform:translateX(0)}
-    25%{transform:translateX(-2px)}
-    50%{transform:translateX(2px)}
-    75%{transform:translateX(-2px)}
-    100%{transform:translateX(0)}
-}
-
-/* FLOAT BUTTON */
-.call{
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    background:red;
-    color:#fff;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:25px;
-    text-decoration:none;
-    animation:ring 1s infinite;
-}
-
-@keyframes ring{
-    0%{box-shadow:0 0 0 0 rgba(255,0,0,0.7)}
-    70%{box-shadow:0 0 0 20px rgba(255,0,0,0)}
-}
-
-/* FOOTER */
-footer{
-    background:#222;
-    color:#fff;
-    padding:20px;
-    margin-top:40px;
-}
-footer .wrap{
-    max-width:1200px;
-    margin:auto;
-}
-iframe{
-    width:100%;
-    height:250px;
-    border:none;
-    margin-top:10px;
-}
+.footer-top{background:#c40000;color:#fff;display:flex;justify-content:space-around;padding:15px;font-weight:bold;flex-wrap:wrap;text-align:center}
+.footer{background:#eee;padding:30px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.footer h4{color:#0b4aa2}
+.map iframe{width:100%;height:250px;border:0}
 </style>
-
 </head>
+
 <body>
 
-<header>
-CÔNG TY CP TM & SX AN HƯNG - INOX AN HƯNG
-<br>📞 0976036631
-</header>
-
-<div class="menu">
-<button onclick="filter('all')">Tất cả</button>
-<button onclick="filter('500')">500kg</button>
-<button onclick="filter('1000')">1000kg</button>
-<button onclick="filter('2000')">2000kg</button>
-</div>
+<div class="header">CÔNG TY CỔ PHẦN THƯƠNG MẠI & SẢN XUẤT AN HƯNG</div>
+<div class="sub-header">INOX AN HƯNG - GIA CÔNG THEO YÊU CẦU | Hotline: 0976036631</div>
 
 <div class="banner">
+<!-- thay link ảnh banner từ github của bạn -->
 <img src="BANNER.jpg">
 </div>
 
+<div class="tabs">
+<button onclick="filter('all')">TẤT CẢ</button>
+<button onclick="filter('500')">500KG</button>
+<button onclick="filter('1000')">1000KG</button>
+<button onclick="filter('2000')">2000KG</button>
+</div>
+
 <div class="container">
-<div class="products" id="products"></div>
+<div class="product-grid" id="products"></div>
 </div>
 
-<a href="tel:0976036631" class="call">📞</a>
-
-<footer>
-<div class="wrap">
-<h3>INOX AN HƯNG - GIA CÔNG THEO YÊU CẦU</h3>
-<p>📍 Lô 10 KCN Tây Bắc Ga - Đông Thọ - TP Thanh Hóa</p>
-<p>📞 0976036631</p>
-
-<iframe src="https://www.google.com/maps?q=19.8216857,105.7604043&hl=vi&z=17&output=embed"></iframe>
+<!-- icon mạng xã hội -->
+<div class="social">
+<a href="tel:0976036631"><img src="phone.png"></a>
+<a href="#"><img src="zalo.png"></a>
+<a href="#"><img src="messenger.png"></a>
+<a href="#"><img src="facebook.png"></a>
 </div>
-</footer>
+
+<a href="tel:0976036631" class="call-btn">📞</a>
+
+<div class="footer-top">
+<div>HOTLINE: 0976036631</div>
+<div>GIA CÔNG INOX THEO YÊU CẦU</div>
+<div>UY TÍN - CHẤT LƯỢNG</div>
+</div>
+
+<div class="footer">
+<div class="footer-grid">
+
+<div>
+<h4>THÔNG TIN CÔNG TY</h4>
+<p>Công ty CP TM & SX An Hưng</p>
+<p>Địa chỉ: Lô 10 KCN Tây Bắc Ga - Đông Thọ - TP Thanh Hóa</p>
+<p>Điện thoại: 0976036631</p>
+</div>
+
+<div>
+<h4>DỊCH VỤ</h4>
+<p>Gia công inox</p>
+<p>Nắp bể inox</p>
+<p>Theo yêu cầu</p>
+</div>
+
+<div class="map">
+<h4>BẢN ĐỒ</h4>
+<iframe src="https://www.google.com/maps?q=19.8216857,105.7604043&hl=vi&z=16&output=embed"></iframe>
+</div>
+
+</div>
+</div>
 
 <script>
-
 const data=[
+{name:'Nắp bể 400x400',img:'1.jpg',price:1300000,old:1700000,type:'500'},
 {name:'Nắp bể 500x500',img:'2.jpg',price:1500000,old:2000000,type:'500'},
 {name:'Nắp bể 600x600',img:'3.jpg',price:1700000,old:2200000,type:'1000'},
 {name:'Nắp bể 700x700',img:'4.jpg',price:2000000,old:2600000,type:'2000'},
@@ -208,29 +118,19 @@ const data=[
 ];
 
 function render(list){
-const html=list.map(p=>`
-<div class="product">
+const html=list.map(p=>`<div class="product">
 <div class="discount">-25%</div>
 <img src="${p.img}">
 <p>${p.name}</p>
 <div class="price">${p.price.toLocaleString()}đ</div>
-<div class="old">${p.old.toLocaleString()}đ</div>
+<div class="old-price">${p.old.toLocaleString()}đ</div>
+<button class="buy-btn" onclick="callNow()">GỌI NGAY</button>
+</div>`).join('');
+document.getElementById('products').innerHTML=html}
 
-<a href="tel:0976036631" class="buy-btn">📞 GỌI NGAY</a>
-
-</div>
-`).join('');
-
-document.getElementById('products').innerHTML=html;
-}
-
-function filter(type){
-if(type==='all') return render(data);
-render(data.filter(p=>p.type===type));
-}
-
-render(data);
-
+function filter(type){if(type==='all')return render(data);render(data.filter(p=>p.type===type))}
+function callNow(){window.location.href='tel:0976036631'}
+render(data)
 </script>
 
 </body>
