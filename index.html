@@ -47,7 +47,6 @@ body{font-family:Arial;margin:0;background:#f5f5f5}
 <body>
 
 <div class="header">CÔNG TY CỔ PHẦN THƯƠNG MẠI & SẢN XUẤT AN HƯNG</div>
-<div class="sub-header">INOX AN HƯNG - GIA CÔNG THEO YÊU CẦU | Hotline: 0976036631</div>
 
 <div class="banner">
 <!-- thay link ảnh banner từ github của bạn -->
@@ -107,17 +106,17 @@ body{font-family:Arial;margin:0;background:#f5f5f5}
 
 <script>
 const data=[
-{name:'Nắp bể 500x500',img:'2.jpg',price:1500000,old:2000000,type:'500'},
-{name:'Nắp bể 600x600',img:'3.jpg',price:1700000,old:2200000,type:'1000'},
-{name:'Nắp bể 700x700',img:'4.jpg',price:2000000,old:2600000,type:'2000'},
-{name:'Nắp bể 800x800',img:'5.jpg',price:2300000,old:3000000,type:'2000'},
-{name:'Nắp bể 900x900',img:'6.jpg',price:2600000,old:3400000,type:'2000'},
-{name:'Nắp bể 1000x1000',img:'7.jpg',price:3000000,old:3800000,type:'2000'}
+{name:'Nắp bể 500x500',img:'2.jpg',price:1215000,old:1350000,type:'500'},
+{name:'Nắp bể 600x600',img:'3.jpg',price:1395000,old:1550000,type:'1000'},
+{name:'Nắp bể 700x700',img:'4.jpg',price:1611000,old:1790000,type:'2000'},
+{name:'Nắp bể 800x800',img:'5.jpg',price:1935000,old:2150000,type:'2000'},
+{name:'Nắp bể 900x900',img:'6.jpg',price:2160000,old:2400000,type:'2000'},
+{name:'Nắp bể 1000x1000',img:'7.jpg',price:2610000,old:2900000,type:'2000'}
 ];
 
 function render(list){
 const html=list.map(p=>`<div class="product">
-<div class="discount">-25%</div>
+<div class="discount">-10%</div>
 <img src="${p.img}">
 <p>${p.name}</p>
 <div class="price">${p.price.toLocaleString()}đ</div>
@@ -130,31 +129,7 @@ function filter(type){if(type==='all')return render(data);render(data.filter(p=>
 function callNow(){window.location.href='tel:0976036631'}
 render(data)
 </script>
-  <script>
-const data=[
-{name:'Nắp bể 500x500',img:'2.jpg',price:1500000,old:2000000,type:'500'},
-{name:'Nắp bể 600x600',img:'3.jpg',price:1700000,old:2200000,type:'1000'},
-{name:'Nắp bể 700x700',img:'4.jpg',price:2000000,old:2600000,type:'2000'},
-{name:'Nắp bể 800x800',img:'5.jpg',price:2300000,old:3000000,type:'2000'},
-{name:'Nắp bể 900x900',img:'6.jpg',price:2600000,old:3400000,type:'2000'},
-{name:'Nắp bể 1000x1000',img:'7.jpg',price:3000000,old:3800000,type:'2000'}
-];
-
-function render(list){
-const html=list.map(p=>`<div class="product">
-<div class="discount">-25%</div>
-<img src="${p.img}">
-<p>${p.name}</p>
-<div class="price">${p.price.toLocaleString()}đ</div>
-<div class="old-price">${p.old.toLocaleString()}đ</div>
-<button class="buy-btn" onclick="callNow()">GỌI NGAY</button>
-</div>`).join('');
-document.getElementById('products').innerHTML=html}
-
-function filter(type){if(type==='all')return render(data);render(data.filter(p=>p.type===type))}
-function callNow(){window.location.href='tel:0976036631'}
-render(data)
-</script>
+  
 
 </body>
 </html>
