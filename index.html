@@ -1,79 +1,46 @@
 <!DOCTYPE html>
-
 <html lang="vi">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Nắp Bể Inox An Hưng | Gia Công Inox Thanh Hóa</title>
 
-<meta name="description"
-content="Công ty CP TM & SX An Hưng chuyên sản xuất nắp bể inox chịu lực, bể nước inox, lan can inox, cầu thang inox, máng xối inox và gia công inox theo yêu cầu tại Thanh Hóa.">
-
-<meta name="keywords"
-content="nắp bể inox, bể nước inox, lan can inox, cầu thang inox, máng xối inox, gia công inox thanh hóa">
-
+<meta name="description" content="Công ty CP TM & SX An Hưng chuyên sản xuất nắp bể inox, lan can inox, cầu thang inox, máng xối inox tại Thanh Hóa.">
+<meta name="keywords" content="inox thanh hóa, nắp bể inox, lan can inox, cầu thang inox">
 <meta name="robots" content="index, follow">
 
 <link rel="icon" href="logo.png">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-font-family:Arial,sans-serif;
-}
-
+/* ================= BASE ================= */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
 body{
 background:#111;
 color:#fff;
+padding-top:85px;
 overflow-x:hidden;
+scroll-behavior:smooth;
 }
 
-/* ===== SCROLLBAR ===== */
-
-::-webkit-scrollbar{
-width:8px;
-}
-
-::-webkit-scrollbar-track{
-background:#111;
-}
-
-::-webkit-scrollbar-thumb{
-background:#d4af37;
-border-radius:20px;
-}
-
-/* ===== CONTAINER ===== */
-
-.container{
-width:95%;
-max-width:1200px;
-margin:auto;
-}
-
-/* ===== HEADER ===== */
-
+/* ================= HEADER ================= */
 header{
 position:fixed;
-top:0;
-left:0;
+top:0;left:0;
 width:100%;
-z-index:999;
-background:rgba(0,0,0,.95);
+background:#000;
 border-bottom:1px solid #d4af37;
+z-index:999;
 }
+
+.container{width:95%;max-width:1200px;margin:auto;}
 
 .navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 0;
+padding:12px 0;
 }
 
 .logo{
@@ -81,1660 +48,289 @@ display:flex;
 align-items:center;
 gap:10px;
 text-decoration:none;
-cursor:pointer;
 }
+
+.logo img{height:42px;}
 
 .logo h1{
-font-size:22px;
+font-size:18px;
 color:#d4af37;
-}
-
-nav{
-display:flex;
-gap:25px;
 }
 
 nav a{
-color:white;
+color:#fff;
 text-decoration:none;
+margin:0 10px;
 font-weight:bold;
-transition:.3s;
 }
 
-nav a:hover{
-color:#d4af37;
-}
+nav a:hover{color:#d4af37;}
 
 .hotline{
 background:#d4af37;
 color:#111;
-padding:10px 18px;
-border-radius:30px;
+padding:8px 15px;
+border-radius:20px;
 font-weight:bold;
-text-decoration:none;
 }
 
-/* ===== MOBILE MENU ===== */
-
-.menu-btn{
-display:none;
-font-size:30px;
-cursor:pointer;
-color:#d4af37;
-}
-
-/* ===== HERO ===== */
-
+/* ================= HERO ================= */
 .hero{
-height:100vh;
-background:
-linear-gradient(
-rgba(0,0,0,.65),
-rgba(0,0,0,.65)
-),
-url('BANNER.jpg');
-
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('BANNER.jpg');
 background-size:cover;
-background-position:center;
-
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 }
 
-.hero-content{
-max-width:850px;
-padding:20px;
-}
-
-.hero h2{
-font-size:55px;
-color:#d4af37;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:22px;
-line-height:1.8;
-margin-bottom:30px;
-}
-
-.hero-buttons{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-}
+.hero h2{font-size:40px;color:#d4af37;}
+.hero p{margin:20px 0;font-size:18px;}
 
 .btn{
-padding:14px 28px;
-border-radius:40px;
-font-weight:bold;
-text-decoration:none;
-transition:.3s;
-}
-
-.btn-gold{
-background:#d4af37;
-color:#111;
-}
-
-.btn-gold:hover{
-transform:translateY(-3px);
-}
-
-.btn-outline{
-border:2px solid #d4af37;
-color:#d4af37;
-}
-
-.btn-outline:hover{
-background:#d4af37;
-color:#111;
-}
-
-/* ===== SECTION ===== */
-
-section{
-padding:80px 0;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:50px;
-}
-
-.section-title h2{
-font-size:40px;
-color:#d4af37;
-margin-bottom:10px;
-}
-
-.section-title p{
-color:#aaa;
-}
-
-/* ===== ABOUT ===== */
-
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-.about img{
-width:100%;
-border-radius:15px;
-}
-
-.about-text h3{
-font-size:30px;
-color:#d4af37;
-margin-bottom:20px;
-}
-
-.about-text p{
-line-height:1.8;
-margin-bottom:15px;
-color:#ddd;
-}
-
-/* ===== FEATURES ===== */
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.feature{
-background:#1a1a1a;
-padding:25px;
-border-radius:15px;
-text-align:center;
-border:1px solid #222;
-transition:.3s;
-}
-
-.feature:hover{
-transform:translateY(-5px);
-border-color:#d4af37;
-}
-
-.feature h3{
-color:#d4af37;
-margin-bottom:10px;
-}
-
-/* ===== RESPONSIVE ===== */
-
-@media(max-width:900px){
-
-nav{
-display:none;
-}
-
-.menu-btn{
-display:block;
-}
-
-.hero h2{
-font-size:38px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-.about{
-grid-template-columns:1fr;
-}
-
-}
-
-  <style>
-
-/* ===== PRODUCTS ===== */
-
-.product-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
-
-.product{
-background:#1a1a1a;
-border-radius:15px;
-overflow:hidden;
-border:1px solid #222;
-transition:.3s;
-position:relative;
-}
-
-.product:hover{
-transform:translateY(-6px);
-border-color:#d4af37;
-}
-
-.product img{
-width:100%;
-height:260px;
-object-fit:cover;
-cursor:pointer;
-}
-
-.discount{
-position:absolute;
-top:15px;
-right:15px;
-background:#d4af37;
-color:#111;
-font-weight:bold;
-padding:8px 12px;
-border-radius:30px;
-}
-
-.product-content{
-padding:20px;
-text-align:center;
-}
-
-.product-content h3{
-margin-bottom:10px;
-}
-
-.price{
-font-size:24px;
-font-weight:bold;
-color:#d4af37;
-}
-
-.old-price{
-text-decoration:line-through;
-color:#777;
-margin:10px 0;
-}
-
-.buy-btn{
-display:inline-block;
-background:#d4af37;
-color:#111;
 padding:12px 20px;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
 }
 
-/* ===== GALLERY ===== */
+.btn-gold{background:#d4af37;color:#111;}
+.btn-outline{border:2px solid #d4af37;color:#d4af37;}
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
+/* ================= SECTION ================= */
+section{padding:70px 0;}
 
-.gallery img{
-width:100%;
-height:260px;
-object-fit:cover;
-border-radius:15px;
-cursor:pointer;
-transition:.3s;
-}
+.section-title{text-align:center;margin-bottom:30px;}
+.section-title h2{color:#d4af37;font-size:30px;}
 
-.gallery img:hover{
-transform:scale(1.03);
-}
-
-/* ===== POPUP ===== */
-
-.modal{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.95);
-display:none;
-justify-content:center;
-align-items:center;
-z-index:9999;
-}
-
-.modal img{
-max-width:90%;
-max-height:90%;
-border-radius:10px;
-}
-
-.close{
-position:absolute;
-top:20px;
-right:30px;
-font-size:40px;
-cursor:pointer;
-color:#fff;
-}
-
-.section-space{
-margin-top:60px;
-}
-
-</style>
-
-<!-- ===== SẢN PHẨM ===== -->
-
-<section id="sanpham">
-
-<div class="container">
-
-<div class="section-title">
- <div> </div>
-<h2>SẢN PHẨM</h2>
-<p>Các sản phẩm nổi bật của Inox An Hưng</p>
-</div>
-
-<div id="products"></div>
-
-</div>
-
-</section>
-
-<!-- ===== CÔNG TRÌNH ===== -->
-
-<section id="congtrinh">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>CÔNG TRÌNH THỰC TẾ</h2>
-
-<p>Một số hình ảnh thi công thực tế</p>
-
-</div>
-
-<div class="gallery">
-
-<img src="11.jpg" loading="lazy">
-
-<img src="12.jpg" loading="lazy">
-
-<img src="13.jpg" loading="lazy">
-
-<img src="14.jpg" loading="lazy">
-
-</div>
-
-</div>
-
-</section>
-
-<!-- POPUP -->
-
-<div class="modal" id="modal">
-
-<span class="close" id="closeModal">×</span>
-
-<img id="modalImg">
-
-</div>
-
-<script>
-
-const products = [
-
-/* NẮP BỂ 500KG */
-
-{
-category:'NẮP BỂ INOX 500KG',
-name:'Nắp bể 500x500',
-img:'500.png',
-price:1215000,
-old:1350000
-},
-
-{
-category:'NẮP BỂ INOX 500KG',
-name:'Nắp bể 600x600',
-img:'600.png',
-price:1395000,
-old:1550000
-},
-
-{
-category:'NẮP BỂ INOX 500KG',
-name:'Nắp bể 700x700',
-img:'700.png',
-price:1611000,
-old:1790000
-},
-
-{
-category:'NẮP BỂ INOX 500KG',
-name:'Nắp bể 800x800',
-img:'800.png',
-price:1935000,
-old:2150000
-},
-
-/* NẮP BỂ 1000KG */
-
-{
-category:'NẮP BỂ INOX 1000KG',
-name:'Nắp bể 500x500',
-img:'8.jpg',
-price:1800000,
-old:1900000
-},
-
-{
-category:'NẮP BỂ INOX 1000KG',
-name:'Nắp bể 600x600',
-img:'9.jpg',
-price:2025000,
-old:2250000
-},
-
-{
-category:'NẮP BỂ INOX 1000KG',
-name:'Nắp bể 700x700',
-img:'10.jpg',
-price:2385000,
-old:2650000
-},
-
-{
-category:'NẮP BỂ INOX 1000KG',
-name:'Nắp bể 800x800',
-img:'11.jpg',
-price:2745000,
-old:3050000
-},
-
-/* SẢN PHẨM KHÁC */
-
-{
-category:'SẢN PHẨM KHÁC',
-name:'Bể Nước Inox',
-img:'12.jpg',
-price:0,
-old:0
-},
-
-{
-category:'SẢN PHẨM KHÁC',
-name:'Lan Can Inox',
-img:'13.jpg',
-price:0,
-old:0
-},
-
-{
-category:'SẢN PHẨM KHÁC',
-name:'Cầu Thang Inox',
-img:'14.jpg',
-price:0,
-old:0
-},
-
-{
-category:'SẢN PHẨM KHÁC',
-name:'Máng Xối Inox',
-img:'11.jpg',
-price:0,
-old:0
-},
-
-{
-category:'SẢN PHẨM KHÁC',
-name:'Gia Công Inox Theo Yêu Cầu',
-img:'12.jpg',
-price:0,
-old:0
-}
-
-];
-
-function formatMoney(x){
-return x.toLocaleString('vi-VN') + 'đ';
-}
-
-function renderProducts(){
-
-const categories=[
-'NẮP BỂ INOX 500KG',
-'NẮP BỂ INOX 1000KG',
-'SẢN PHẨM KHÁC'
-];
-
-  
-let html='';
-
-categories.forEach(cat=>{
-
-html += `
-<div class="section-title section-space">
-<h2>${cat}</h2>
-</div>
-
-<div class="product-grid">
-`;
-
-products
-.filter(p=>p.category===cat)
-.forEach(p=>{
-
-const discount =
-p.old > 0
-?
-Math.round((1-p.price/p.old)*100)
-:
-0;
-
-html += `
-
-<div class="product">
-
-${p.old > 0 ?
-`<div class="discount">-${discount}%</div>`
-:
-''}
-
-<img src="${p.img}" onclick="showImage('${p.img}')">
-
-<div class="product-content">
-
-<h3>${p.name}</h3>
-
-${p.price > 0 ?
-
-`
-<div class="price">
-${formatMoney(p.price)}
-</div>
-
-<div class="old-price">
-${formatMoney(p.old)}
-</div>
-`
-
-:
-
-`
-<div class="price">
-Liên hệ báo giá
-</div>
-`
-}
-
-<a
-href="tel:0976036631"
-class="buy-btn">
-GỌI NGAY
-</a>
-
-</div>
-
-</div>
-
-`;
-
-});
-
-html += `</div>`;
-
-});
-
-document.getElementById('products').innerHTML=html;
-
-}
-
-renderProducts();
-
-/* POPUP */
-
-const modal =
-document.getElementById('modal');
-
-const modalImg =
-document.getElementById('modalImg');
-
-function showImage(src){
-
-modal.style.display='flex';
-
-modalImg.src=src;
-
-}
-
-document
-.getElementById('closeModal')
-.onclick=function(){
-
-modal.style.display='none';
-
-}
-
-modal.onclick=function(e){
-
-if(e.target===modal){
-
-modal.style.display='none';
-
-}
-
-}
-
-</script>
-<style>
-
-/* ===== PRODUCTS ===== */
-
+/* ================= PRODUCTS ================= */
 .product-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
 }
 
 .product{
 background:#1a1a1a;
-border-radius:15px;
+border-radius:12px;
 overflow:hidden;
-border:1px solid #222;
-transition:.3s;
 position:relative;
 }
 
-.product:hover{
-transform:translateY(-6px);
-border-color:#d4af37;
-}
+.product img{width:100%;height:200px;object-fit:cover;}
 
-.product img{
-width:100%;
-height:260px;
-object-fit:cover;
-cursor:pointer;
-}
+.product-content{padding:15px;text-align:center;}
 
-.discount{
-position:absolute;
-top:15px;
-right:15px;
-background:#d4af37;
-color:#111;
-font-weight:bold;
-padding:8px 12px;
-border-radius:30px;
-}
-
-.product-content{
-padding:20px;
-text-align:center;
-}
-
-.product-content h3{
-margin-bottom:10px;
-}
-
-.price{
-font-size:24px;
-font-weight:bold;
-color:#d4af37;
-}
-
-.old-price{
-text-decoration:line-through;
-color:#777;
-margin:10px 0;
-}
+.price{color:#d4af37;font-size:18px;font-weight:bold;}
 
 .buy-btn{
 display:inline-block;
+margin-top:10px;
 background:#d4af37;
 color:#111;
-padding:12px 20px;
-border-radius:30px;
+padding:8px 15px;
+border-radius:20px;
 text-decoration:none;
-font-weight:bold;
 }
 
-/* ===== GALLERY ===== */
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.gallery img{
-width:100%;
-height:260px;
-object-fit:cover;
-border-radius:15px;
-cursor:pointer;
-transition:.3s;
-}
-
-.gallery img:hover{
-transform:scale(1.03);
-}
-
-/* ===== POPUP ===== */
-
-.modal{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.95);
-display:none;
-justify-content:center;
-align-items:center;
-z-index:9999;
-}
-
-.modal img{
-max-width:90%;
-max-height:90%;
-border-radius:10px;
-}
-
-.close{
-position:absolute;
-top:20px;
-right:30px;
-font-size:40px;
-cursor:pointer;
-color:#fff;
-}
-
-.section-space{
-margin-top:60px;
-}
-
-</style>
-
-<!-- ===== SẢN PHẨM ===== -->
-
-<section id="sanpham">
-
-<div class="container">
-
-<div class="section-title">
-<h2>SẢN PHẨM</h2>
-<p>Các sản phẩm nổi bật của Inox An Hưng</p>
-</div>
-
-<div id="products"></div>
-
-</div>
-
-</section>
-
-<!-- ===== CÔNG TRÌNH ===== -->
-
-<section id="congtrinh">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>CÔNG TRÌNH THỰC TẾ</h2>
-
-<p>Một số hình ảnh thi công thực tế</p>
-
-</div>
-
-<div class="gallery">
-
-<img src="11.jpg" loading="lazy">
-
-<img src="12.jpg" loading="lazy">
-
-<img src="13.jpg" loading="lazy">
-
-<img src="14.jpg" loading="lazy">
-
-</div>
-
-</div>
-
-</section>
-
-<!-- POPUP -->
-
-<div class="modal" id="modal">
-
-<span class="close" id="closeModal">×</span>
-
-<img id="modalImg">
-
-</div>
-
-<script>
-
-const products = [
-
-/* NẮP BỂ 500KG */
-
-{
-category:'NẮP BỂ INOX 500KG',
-name:'Nắp bể 500x500',
-img:'500.png',
-price:1215000,
-old:1350000
-},
-
-{
-category:'NẮP BỂ INOX 500KG',
-name:'Nắp bể 600x600',
-img:'600.png',
-price:1395000,
-old:1550000
-},
-
-{
-category:'NẮP BỂ INOX 500KG',
-name:'Nắp bể 700x700',
-img:'700.png',
-price:1611000,
-old:1790000
-},
-
-{
-category:'NẮP BỂ INOX 500KG',
-name:'Nắp bể 800x800',
-img:'800.png',
-price:1935000,
-old:2150000
-},
-
-/* NẮP BỂ 1000KG */
-
-{
-category:'NẮP BỂ INOX 1000KG',
-name:'Nắp bể 500x500',
-img:'8.jpg',
-price:1800000,
-old:1900000
-},
-
-{
-category:'NẮP BỂ INOX 1000KG',
-name:'Nắp bể 600x600',
-img:'9.jpg',
-price:2025000,
-old:2250000
-},
-
-{
-category:'NẮP BỂ INOX 1000KG',
-name:'Nắp bể 700x700',
-img:'10.jpg',
-price:2385000,
-old:2650000
-},
-
-{
-category:'NẮP BỂ INOX 1000KG',
-name:'Nắp bể 800x800',
-img:'11.jpg',
-price:2745000,
-old:3050000
-},
-
-/* SẢN PHẨM KHÁC */
-
-{
-category:'SẢN PHẨM KHÁC',
-name:'Bể Nước Inox',
-img:'12.jpg',
-price:0,
-old:0
-},
-
-{
-category:'SẢN PHẨM KHÁC',
-name:'Lan Can Inox',
-img:'13.jpg',
-price:0,
-old:0
-},
-
-{
-category:'SẢN PHẨM KHÁC',
-name:'Cầu Thang Inox',
-img:'14.jpg',
-price:0,
-old:0
-},
-
-{
-category:'SẢN PHẨM KHÁC',
-name:'Máng Xối Inox',
-img:'11.jpg',
-price:0,
-old:0
-},
-
-{
-category:'SẢN PHẨM KHÁC',
-name:'Gia Công Inox Theo Yêu Cầu',
-img:'12.jpg',
-price:0,
-old:0
-}
-
-];
-
-function formatMoney(x){
-return x.toLocaleString('vi-VN') + 'đ';
-}
-
-function renderProducts(){
-
-const categories=[
-'NẮP BỂ INOX 500KG',
-'NẮP BỂ INOX 1000KG',
-'SẢN PHẨM KHÁC'
-];
-
-let html='';
-
-categories.forEach(cat=>{
-
-html += `
-<div class="section-title section-space">
-<h2>${cat}</h2>
-</div>
-
-<div class="product-grid">
-`;
-
-products
-.filter(p=>p.category===cat)
-.forEach(p=>{
-
-const discount =
-p.old > 0
-?
-Math.round((1-p.price/p.old)*100)
-:
-0;
-
-html += `
-
-<div class="product">
-
-${p.old > 0 ?
-`<div class="discount">-${discount}%</div>`
-:
-''}
-
-<img src="${p.img}" onclick="showImage('${p.img}')">
-
-<div class="product-content">
-
-<h3>${p.name}</h3>
-
-${p.price > 0 ?
-
-`
-<div class="price">
-${formatMoney(p.price)}
-</div>
-
-<div class="old-price">
-${formatMoney(p.old)}
-</div>
-`
-
-:
-
-`
-<div class="price">
-Liên hệ báo giá
-</div>
-`
-}
-
-<a
-href="tel:0976036631"
-class="buy-btn">
-GỌI NGAY
-</a>
-
-</div>
-
-</div>
-
-`;
-
-});
-
-html += `</div>`;
-
-});
-
-document.getElementById('products').innerHTML=html;
-
-}
-
-renderProducts();
-
-/* POPUP */
-
-const modal =
-document.getElementById('modal');
-
-const modalImg =
-document.getElementById('modalImg');
-
-function showImage(src){
-
-modal.style.display='flex';
-
-modalImg.src=src;
-
-}
-
-document
-.getElementById('closeModal')
-.onclick=function(){
-
-modal.style.display='none';
-
-}
-
-modal.onclick=function(e){
-
-if(e.target===modal){
-
-modal.style.display='none';
-
-}
-
-}
-<style>
-
-/* ===== FORM BÁO GIÁ ===== */
-
-.quote-wrap{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-}
-
-.quote-info{
-background:#1a1a1a;
-padding:30px;
-border-radius:15px;
-border:1px solid #222;
-}
-
-.quote-info h3{
-color:#d4af37;
-margin-bottom:20px;
-}
-
-.quote-info p{
-margin-bottom:12px;
-line-height:1.8;
-}
-
-.quote-form{
-background:#1a1a1a;
-padding:30px;
-border-radius:15px;
-border:1px solid #222;
-}
-
-.quote-form input,
-.quote-form textarea{
-
-width:100%;
-padding:15px;
-margin-bottom:15px;
-border:none;
-outline:none;
-border-radius:8px;
-background:#111;
-color:#fff;
-}
-
-.quote-form textarea{
-height:140px;
-resize:none;
-}
-
-.quote-form button{
-width:100%;
-padding:15px;
-border:none;
-background:#d4af37;
-color:#111;
-font-weight:bold;
-cursor:pointer;
-border-radius:8px;
-}
-
-/* ===== FOOTER ===== */
-
-footer{
-background:#000;
-padding:60px 0 30px;
-border-top:1px solid #222;
-}
-
-.footer-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-}
-
-.footer-box h3{
-color:#d4af37;
-margin-bottom:15px;
-}
-
-.footer-box p,
-.footer-box a{
-color:#ccc;
-text-decoration:none;
-display:block;
-margin-bottom:10px;
-line-height:1.7;
-}
-
-.map iframe{
-width:100%;
-height:250px;
-border:none;
-border-radius:10px;
-}
-
-.copyright{
-text-align:center;
-margin-top:40px;
-padding-top:20px;
-border-top:1px solid #222;
-color:#777;
-}
-
-/* ===== SOCIAL FLOAT ===== */
-
-.social{
+/* ================= FLOAT ICON ================= */
+.contact-float{
 position:fixed;
 right:20px;
-bottom:20px;
+bottom:80px;
 display:flex;
 flex-direction:column;
 gap:12px;
-z-index:999;
+z-index:9999;
 }
 
-.social a{
-width:55px;
-height:55px;
+.cf-item{
+width:55px;height:55px;
 border-radius:50%;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,.4);
-}
-
-.social img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.social a:hover{
-transform:scale(1.1);
-}
-
-/* ===== TOP BUTTON ===== */
-
-.top-btn{
-position:fixed;
-left:20px;
-bottom:20px;
-width:50px;
-height:50px;
-background:#d4af37;
-color:#111;
 display:flex;
-justify-content:center;
 align-items:center;
-font-size:24px;
+justify-content:center;
+color:#fff;
+font-size:20px;
+text-decoration:none;
+position:relative;
+animation:shake 1.8s infinite;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.phone{background:#e74c3c;}
+.zalo{background:#0084ff;}
+.messenger{background:#1877f2;}
+
+@keyframes shake{
+0%{transform:rotate(0);}
+25%{transform:rotate(4deg);}
+50%{transform:rotate(0);}
+75%{transform:rotate(-4deg);}
+100%{transform:rotate(0);}
+}
+
+.pulse{
+position:absolute;
+width:100%;height:100%;
 border-radius:50%;
-cursor:pointer;
-z-index:999;
-display:none;
+background:inherit;
+animation:pulse 2s infinite;
+z-index:-1;
 }
 
-/* ===== MOBILE ===== */
-
-@media(max-width:900px){
-
-.quote-wrap{
-grid-template-columns:1fr;
+@keyframes pulse{
+0%{transform:scale(1);opacity:.6;}
+100%{transform:scale(2.5);opacity:0;}
 }
 
-.hero h2{
-font-size:34px;
+/* ================= FORM ================= */
+.form-box{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
 }
 
-.hero p{
-font-size:17px;
+input,textarea{
+width:100%;
+padding:10px;
+margin-bottom:10px;
 }
 
-.logo h1{
-font-size:18px;
-}
-
-.hotline{
-display:none;
-}
-
+/* ================= FOOTER ================= */
+footer{
+background:#000;
+padding:40px 0;
+text-align:center;
+color:#aaa;
 }
 
 </style>
+</head>
 
-<!-- ===== BÁO GIÁ ===== -->
+<body>
 
+<!-- ================= HEADER ================= -->
+<header>
+<div class="container navbar">
+
+<a href="./" class="logo">
+<img src="logo.png">
+<h1>INOX AN HƯNG</h1>
+</a>
+
+<nav>
+<a href="#sanpham">Sản phẩm</a>
+<a href="#baogia">Báo giá</a>
+<a href="#lienhe">Liên hệ</a>
+</nav>
+
+<a href="tel:0976036631" class="hotline">📞 Gọi ngay</a>
+
+</div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+<div>
+<h2>GIA CÔNG INOX THANH HÓA</h2>
+<p>Nắp bể inox - Lan can - Cầu thang - Máng xối</p>
+<a href="tel:0976036631" class="btn btn-gold">GỌI NGAY</a>
+<a href="#baogia" class="btn btn-outline">BÁO GIÁ</a>
+</div>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<section id="sanpham">
+<div class="container">
+<div class="section-title">
+<h2>SẢN PHẨM</h2>
+</div>
+
+<div class="product-grid" id="products"></div>
+</div>
+</section>
+
+<!-- ================= FORM ================= -->
 <section id="baogia">
-
 <div class="container">
 
 <div class="section-title">
-
 <h2>YÊU CẦU BÁO GIÁ</h2>
-
-<p>Gửi thông tin, chúng tôi sẽ liên hệ sớm nhất</p>
-
 </div>
 
-<div class="quote-wrap">
+<div class="form-box">
 
-<div class="quote-info">
-
-<h3>THÔNG TIN LIÊN HỆ</h3>
-
-<p>
-📍 Lô 10 Khu Công Nghiệp Tây Bắc Ga,
-Phường Hàm Rồng,
-TP Thanh Hóa,
-Tỉnh Thanh Hóa
-</p>
-
-<p>
-📞 Hotline: 0976 036 631
-</p>
-
-<p>
-✉ Email:
-nguyendunghuyen100690@gmail.com
-</p>
-
-<p>
-✓ Báo giá nhanh
-</p>
-
-<p>
-✓ Gia công theo yêu cầu
-</p>
-
-<p>
-✓ Hỗ trợ tận nơi
-</p>
-
+<div>
+<h3>Thông tin liên hệ</h3>
+<p>📍 Thanh Hóa</p>
+<p>📞 0976036631</p>
 </div>
 
-<div class="quote-form">
-
-<form onsubmit="sendQuote(event)">
-
-<input
-type="text"
-placeholder="Họ và tên"
-required>
-
-<input
-type="tel"
-placeholder="Số điện thoại"
-required>
-
-<input
-type="text"
-placeholder="Sản phẩm cần báo giá">
-
-<textarea
-placeholder="Nội dung yêu cầu">
-</textarea>
-
-<button type="submit">
-GỬI YÊU CẦU
-</button>
-
-</form>
-
+<div>
+<input placeholder="Họ tên">
+<input placeholder="SĐT">
+<textarea placeholder="Nội dung"></textarea>
+<button class="buy-btn">GỬI YÊU CẦU</button>
 </div>
 
 </div>
 
 </div>
-
 </section>
 
-<!-- ===== FOOTER ===== -->
-
+<!-- ================= FOOTER ================= -->
 <footer id="lienhe">
-
-<div class="container">
-
-<div class="footer-grid">
-
-<div class="footer-box">
-
-<h3>INOX AN HƯNG</h3>
-
-<p>
-Chuyên sản xuất nắp bể inox,
-bể nước inox,
-lan can inox,
-cầu thang inox,
-máng xối inox
-và gia công inox theo yêu cầu.
-</p>
-
-</div>
-
-<div class="footer-box">
-
-<h3>THÔNG TIN</h3>
-
-<p>
-📞 0976036631
-</p>
-
-<p>
-✉ nguyendunghuyen100690@gmail.com
-</p>
-
-<p>
-📍 Lô 10 KCN Tây Bắc Ga,
-Phường Hàm Rồng,
-TP Thanh Hóa
-</p>
-
-<a href="https://zalo.me/4076776927681495659">
-Zalo
-</a>
-
-<a href="https://www.facebook.com/inoxanhungthanhhoa/">
-Facebook
-</a>
-
-</div>
-
-<div class="footer-box map">
-
-<h3>BẢN ĐỒ</h3>
-
-<iframe
-src="https://www.google.com/maps?q=19.8216857,105.7604043&z=16&output=embed">
-</iframe>
-
-</div>
-
-</div>
-
-<div class="copyright">
-
-© 2025 INOX AN HƯNG.
-All Rights Reserved.
-
-</div>
-
-</div>
-
+© 2026 Inox An Hưng - Thanh Hóa
 </footer>
 
-<!-- ===== SOCIAL ===== -->
+<!-- ================= FLOAT ICON ================= -->
+<div class="contact-float">
 
-<div class="social">
-
-<a href="tel:0976036631">
-<img src="phone.png">
+<a href="tel:0976036631" class="cf-item phone">
+📞<span class="pulse"></span>
 </a>
 
-<a href="https://zalo.me/4076776927681495659">
-<img src="zalo.png">
+<a href="https://zalo.me/4076776927681495659" class="cf-item zalo">
+Z<span class="pulse"></span>
 </a>
 
-<a href="https://www.facebook.com/inoxanhungthanhhoa/">
-<img src="facebook.png">
+<a href="https://www.facebook.com/inoxanhungthanhhoa/" class="cf-item messenger">
+M<span class="pulse"></span>
 </a>
 
 </div>
 
-<!-- ===== TOP ===== -->
-
-<div
-class="top-btn"
-id="topBtn">
-↑
-</div>
-
+<!-- ================= JS ================= -->
 <script>
 
-/* FORM */
+const products=[
+{name:"Nắp bể 500x500",price:1215000,img:"500.png"},
+{name:"Nắp bể 600x600",price:1395000,img:"600.png"},
+{name:"Lan can inox",price:0,img:"11.jpg"},
+];
 
-function sendQuote(e){
+let html="";
 
-e.preventDefault();
-
-alert(
-'Cảm ơn quý khách. Chúng tôi sẽ liên hệ sớm nhất!'
-);
-
-}
-
-/* TOP BUTTON */
-
-const topBtn =
-document.getElementById('topBtn');
-
-window.addEventListener(
-'scroll',
-function(){
-
-if(window.scrollY>400){
-
-topBtn.style.display='flex';
-
-}else{
-
-topBtn.style.display='none';
-
-}
-
-}
-);
-
-topBtn.onclick=function(){
-
-window.scrollTo({
-top:0,
-behavior:'smooth'
+products.forEach(p=>{
+html+=`
+<div class="product">
+<img src="${p.img}">
+<div class="product-content">
+<h3>${p.name}</h3>
+<div class="price">
+${p.price>0?p.price.toLocaleString()+"đ":"Liên hệ"}
+</div>
+<a href="tel:0976036631" class="buy-btn">GỌI NGAY</a>
+</div>
+</div>
+`;
 });
 
-};
+document.getElementById("products").innerHTML=html;
 
 </script>
 
 </body>
 </html>
-
-</script>
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<div class="container navbar">
-
-<a href="/" class="logo">
-<img src="logo.png" alt="Inox An Hưng">
-<h1>INOX AN HƯNG</h1>
-</a>
-
-<nav>
-
-<a href="#gioithieu">Giới Thiệu</a>
-
-<a href="#sanpham">Sản Phẩm</a>
-
-<a href="#congtrinh">Công Trình</a>
-
-<a href="#baogia">Báo Giá</a>
-
-<a href="#lienhe">Liên Hệ</a>
-
-</nav>
-
-<a href="tel:0976036631" class="hotline">
-📞 0976 036 631
-</a>
-
-<div class="menu-btn">
-☰
-</div>
-
-</div>
-
-</header>
-
-<section class="hero">
-
-<div class="hero-content">
-
-<h2>
-CÔNG TY CP TM & SX AN HƯNG
-</h2>
-
-<p>
-Chuyên sản xuất nắp bể inox chịu lực,
-bể nước inox, lan can inox, cầu thang inox,
-máng xối inox và gia công inox theo yêu cầu.
-</p>
-
-<div class="hero-buttons">
-
-<a href="tel:0976036631" class="btn btn-gold">
-GỌI NGAY
-</a>
-
-<a href="#baogia" class="btn btn-outline">
-YÊU CẦU BÁO GIÁ
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="gioithieu">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>GIỚI THIỆU</h2>
-
-<p>Uy tín - Chất lượng - Giá tận xưởng</p>
-
-</div>
-
-<div class="about">
-
-<img src="11.jpg" loading="lazy">
-
-<div class="about-text">
-
-<h3>INOX AN HƯNG</h3>
-
-<p>
-Công ty CP TM & SX An Hưng là đơn vị chuyên
-gia công và sản xuất các sản phẩm inox dân dụng
-và công nghiệp tại Thanh Hóa.
-</p>
-
-<p>
-Chúng tôi cung cấp các sản phẩm chất lượng cao
-như nắp bể inox chịu lực, bể nước inox,
-lan can inox, cầu thang inox, máng xối inox
-và nhận gia công inox theo yêu cầu.
-</p>
-
-<p>
-Cam kết vật liệu đạt chuẩn, thi công chính xác,
-giá thành cạnh tranh và hỗ trợ khách hàng tận tâm.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>LÝ DO CHỌN CHÚNG TÔI</h2>
-
-<p>Những giá trị tạo nên thương hiệu An Hưng</p>
-
-</div>
-
-<div class="features">
-
-<div class="feature">
-<h3>✓ Inox Chất Lượng</h3>
-<p>Độ bền cao, chống ăn mòn tốt.</p>
-</div>
-
-<div class="feature">
-<h3>✓ Giá Tận Xưởng</h3>
-<p>Không qua trung gian.</p>
-</div>
-
-<div class="feature">
-<h3>✓ Gia Công Theo Yêu Cầu</h3>
-<p>Đúng kích thước, đúng kỹ thuật.</p>
-</div>
-
-<div class="feature">
-<h3>✓ Hỗ Trợ Nhanh</h3>
-<p>Tư vấn và báo giá trong ngày.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
