@@ -24,6 +24,67 @@
     </a>
 
   </div>
+  
+ /* ===== HEADER STYLE ===== */
+.header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#000;
+border-bottom:1px solid #d4af37;
+z-index:999;
+}
+
+.header-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 0;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+text-decoration:none;
+color:#d4af37;
+font-weight:bold;
+}
+
+.logo img{
+height:38px;   /* FIX lỗi logo to */
+width:auto;
+}
+
+.nav{
+display:flex;
+gap:20px;
+}
+
+.nav a{
+color:#fff;
+text-decoration:none;
+font-size:14px;
+}
+
+.nav a:hover{
+color:#d4af37;
+}
+
+.hotline{
+background:#d4af37;
+color:#111;
+padding:8px 14px;
+border-radius:20px;
+font-weight:bold;
+text-decoration:none;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.nav{display:none;}
+}
 
 </header>
 <!-- ===== HEADER END ===== -->
