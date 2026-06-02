@@ -300,6 +300,95 @@ grid-template-columns:1fr;
 font-size:24px;
 }
 }
+
+  
+  /* ===== phần 4 ===== */
+/* ===== BENEFITS ===== */
+.benefits{
+padding:70px 0;
+background:#0f0f0f;
+color:#fff;
+}
+
+.benefits-container{
+max-width:1200px;
+margin:auto;
+width:95%;
+}
+
+.benefits-title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.benefits-title h2{
+color:#d4af37;
+font-size:32px;
+margin-bottom:10px;
+}
+
+.benefits-title p{
+color:#aaa;
+}
+
+/* GRID */
+.benefits-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+/* ITEM */
+.benefit-item{
+background:#1a1a1a;
+padding:20px;
+border-radius:12px;
+text-align:center;
+border:1px solid #222;
+transition:.2s;
+}
+
+.benefit-item:hover{
+transform:translateY(-5px);
+border-color:#d4af37;
+}
+
+.benefit-item h3{
+color:#d4af37;
+margin-bottom:10px;
+font-size:18px;
+}
+
+.benefit-item p{
+color:#ccc;
+line-height:1.6;
+font-size:14px;
+}
+
+/* ICON CIRCLE */
+.benefit-icon{
+width:50px;
+height:50px;
+margin:0 auto 15px;
+border-radius:50%;
+background:#d4af37;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+color:#111;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.benefits-title h2{
+font-size:24px;
+}
+}
+
+
+
+  
 </style>
 
 <section class="about" id="gioithieu">
@@ -355,10 +444,53 @@ font-size:24px;
 
   </div>
 
-</section>
 
 <!-- ===== ABOUT SECTION END ===== -->
 
+  <!-- ===== BENEFITS START ===== -->
+
+  <div class="benefits-container">
+
+    <!-- TITLE -->
+    <div class="benefits-title">
+      <h2>LÝ DO CHỌN CHÚNG TÔI</h2>
+      <p>Những giá trị tạo nên uy tín Inox An Hưng</p>
+    </div>
+
+    <!-- GRID -->
+    <div class="benefits-grid">
+
+      <div class="benefit-item">
+        <div class="benefit-icon">✓</div>
+        <h3>Inox chất lượng cao</h3>
+        <p>Sử dụng inox 304 bền đẹp, chống gỉ sét tốt.</p>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-icon">💰</div>
+        <h3>Giá tận xưởng</h3>
+        <p>Không qua trung gian, giá cạnh tranh nhất thị trường.</p>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-icon">⚙️</div>
+        <h3>Gia công chính xác</h3>
+        <p>Đúng kỹ thuật, đúng kích thước theo yêu cầu.</p>
+      </div>
+
+      <div class="benefit-item">
+        <div class="benefit-icon">🚀</div>
+        <h3>Thi công nhanh</h3>
+        <p>Đảm bảo tiến độ, hỗ trợ lắp đặt tận nơi.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===== BENEFITS END ===== -->
   
 </body>
 </html>
