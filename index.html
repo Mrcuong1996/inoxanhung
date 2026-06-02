@@ -131,5 +131,110 @@ white-space:nowrap;
 <section class="hero">
    HERO SECTION của bạn sẽ đặt ngay dưới header này
 -->
+<!-- ===== HERO SECTION START ===== -->
+
+<style>
+
+/* ===== HERO ===== */
+.hero{
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('BANNER.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
+}
+
+.hero-inner{
+max-width:900px;
+padding:20px;
+}
+
+.hero h1{
+font-size:42px;
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+color:#ddd;
+margin-bottom:25px;
+line-height:1.6;
+}
+
+/* BUTTON */
+.hero-btns{
+display:flex;
+gap:12px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:12px 20px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:.2s;
+}
+
+.btn-gold{
+background:#d4af37;
+color:#111;
+}
+
+.btn-outline{
+border:2px solid #d4af37;
+color:#d4af37;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.hero h1{font-size:26px;}
+.hero p{font-size:15px;}
+}
+
+</style>
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <h1>GIA CÔNG INOX THANH HÓA</h1>
+
+    <p>
+      Nắp bể inox • Lan can inox • Cầu thang inox • Máng xối inox  
+      <br>
+      Giá xưởng - Thi công tận nơi - Bảo hành rõ ràng
+    </p>
+
+    <div class="hero-btns">
+
+      <a href="tel:0976036631" class="btn btn-gold">
+        📞 GỌI NGAY
+      </a>
+
+      <a href="#baogia" class="btn btn-outline">
+        NHẬN BÁO GIÁ
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===== HERO SECTION END ===== -->
+  
 </body>
 </html>
