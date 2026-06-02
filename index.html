@@ -437,11 +437,10 @@ border-color:#d4af37;
 /* IMAGE */
 .product-item img,
 .project-item img{
-width:100%;
-height:220px;
-object-fit:contain;
-background:#000;
-display:block;
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
 }
 
 /* TEXT */
@@ -742,9 +741,13 @@ background:#1a1a1a;
 border:1px solid #222;
 }
 
+.product-item{
+  overflow:hidden;
+}
+
 .project-item img{
 width:100%;
-height:260px;
+height:200px;
 object-fit:cover;
 display:block;
 transition:.4s;
