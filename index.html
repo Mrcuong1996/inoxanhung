@@ -1,7 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Header Inox An Hưng</title>
+
+<style>
+
+/* ===== BASE ===== */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+padding-top:70px; /* tránh bị header che */
+background:#111;
+}
+
+/* ===== HEADER ===== */
+.header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#000;
+border-bottom:1px solid #d4af37;
+z-index:999;
+}
+
+.header-inner{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 15px;
+}
+
+/* LOGO */
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+text-decoration:none;
+color:#d4af37;
+font-weight:bold;
+}
+
+.logo img{
+height:38px;
+width:auto;
+}
+
+/* MENU */
+.nav{
+display:flex;
+gap:18px;
+}
+
+.nav a{
+color:#fff;
+text-decoration:none;
+font-size:14px;
+transition:.2s;
+}
+
+.nav a:hover{
+color:#d4af37;
+}
+
+/* HOTLINE */
+.hotline{
+background:#d4af37;
+color:#111;
+padding:8px 14px;
+border-radius:20px;
+font-weight:bold;
+text-decoration:none;
+white-space:nowrap;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.nav{display:none;}
+.logo span{font-size:14px;}
+.hotline{padding:6px 10px;font-size:13px;}
+.logo img{height:32px;} /* FIX logo nhỏ lại trên mobile */
+}
+
+</style>
+</head>
+
+<body>
+
 <!-- ===== HEADER START ===== -->
 <header class="header">
 
-  <div class="container header-inner">
+  <div class="header-inner">
 
     <!-- LOGO (click về home) -->
     <a href="./" class="logo">
@@ -18,73 +116,20 @@
       <a href="#lienhe">Liên hệ</a>
     </nav>
 
-    <!-- HOTLINE CTA -->
+    <!-- HOTLINE -->
     <a href="tel:0976036631" class="hotline">
       📞 0976 036 631
     </a>
 
   </div>
-  
- /* ===== HEADER STYLE ===== */
-.header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:#000;
-border-bottom:1px solid #d4af37;
-z-index:999;
-}
-
-.header-inner{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:10px 0;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-text-decoration:none;
-color:#d4af37;
-font-weight:bold;
-}
-
-.logo img{
-height:38px;   /* FIX lỗi logo to */
-width:auto;
-}
-
-.nav{
-display:flex;
-gap:20px;
-}
-
-.nav a{
-color:#fff;
-text-decoration:none;
-font-size:14px;
-}
-
-.nav a:hover{
-color:#d4af37;
-}
-
-.hotline{
-background:#d4af37;
-color:#111;
-padding:8px 14px;
-border-radius:20px;
-font-weight:bold;
-text-decoration:none;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-.nav{display:none;}
-}
 
 </header>
 <!-- ===== HEADER END ===== -->
+
+<!-- ===== HERO SECTION sẽ đặt ở đây ===== -->
+<!--
+<section class="hero">
+   HERO SECTION của bạn sẽ đặt ngay dưới header này
+-->
+</body>
+</html>
