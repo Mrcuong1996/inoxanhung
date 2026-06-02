@@ -386,8 +386,71 @@ font-size:24px;
 }
 }
 
+  /* ===== PRODUCTS ===== */
+.products{
+padding:70px 0;
+background:#111;
+color:#fff;
+}
 
+.products-container{
+max-width:1200px;
+margin:auto;
+width:95%;
+}
 
+.products-title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.products-title h2{
+color:#d4af37;
+font-size:32px;
+margin-bottom:10px;
+}
+
+.products-title p{
+color:#aaa;
+}
+
+.products-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.product-item{
+background:#1a1a1a;
+padding:20px;
+border-radius:12px;
+border:1px solid #222;
+transition:.2s;
+}
+
+.product-item:hover{
+transform:translateY(-5px);
+border-color:#d4af37;
+}
+
+.product-item h3{
+color:#d4af37;
+margin-bottom:10px;
+font-size:18px;
+}
+
+.product-item p{
+color:#ccc;
+font-size:14px;
+line-height:1.6;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.products-title h2{
+font-size:24px;
+}
+}
   
 </style>
 
@@ -493,6 +556,57 @@ font-size:24px;
 </section>
 
 <!-- ===== BENEFITS END ===== -->
+
+  <!-- ===== PRODUCTS / SERVICES START ===== -->
+<section class="products" id="sanpham">
+
+  <div class="products-container">
+
+    <!-- TITLE -->
+    <div class="products-title">
+      <h2>SẢN PHẨM / DỊCH VỤ</h2>
+      <p>Các hạng mục gia công inox tại An Hưng</p>
+    </div>
+
+    <!-- GRID -->
+    <div class="products-grid">
+
+      <div class="product-item">
+        <h3>Nắp bể inox</h3>
+        <p>Thiết kế theo kích thước, chịu lực tốt, bền đẹp.</p>
+      </div>
+
+      <div class="product-item">
+        <h3>Bể nước inox</h3>
+        <p>Sản xuất inox 304, an toàn, chống gỉ tuyệt đối.</p>
+      </div>
+
+      <div class="product-item">
+        <h3>Cầu thang inox</h3>
+        <p>Thi công chắc chắn, thẩm mỹ cao cho nhà ở & công trình.</p>
+      </div>
+
+      <div class="product-item">
+        <h3>Lan can inox</h3>
+        <p>Kiểu dáng hiện đại, độ bền cao, an toàn sử dụng.</p>
+      </div>
+
+      <div class="product-item">
+        <h3>Máng xối inox</h3>
+        <p>Chống ăn mòn, thoát nước tốt, phù hợp mọi công trình.</p>
+      </div>
+
+      <div class="product-item">
+        <h3>Gia công theo yêu cầu</h3>
+        <p>Nhận thiết kế và sản xuất theo bản vẽ riêng.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ===== PRODUCTS / SERVICES END ===== -->
   
 </body>
 </html>
