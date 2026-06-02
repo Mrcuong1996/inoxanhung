@@ -80,10 +80,8 @@ padding:15px 0;
 display:flex;
 align-items:center;
 gap:10px;
-}
-
-.logo img{
-height:55px;
+text-decoration:none;
+cursor:pointer;
 }
 
 .logo h1{
@@ -433,6 +431,7 @@ margin-top:60px;
 <div class="container">
 
 <div class="section-title">
+ <div> </div>
 <h2>SẢN PHẨM</h2>
 <p>Các sản phẩm nổi bật của Inox An Hưng</p>
 </div>
@@ -611,6 +610,7 @@ const categories=[
 'SẢN PHẨM KHÁC'
 ];
 
+  
 let html='';
 
 categories.forEach(cat=>{
@@ -1592,10 +1592,10 @@ behavior:'smooth'
 
 <div class="container navbar">
 
-<div class="logo">
+<a href="/" class="logo">
 <img src="logo.png" alt="Inox An Hưng">
 <h1>INOX AN HƯNG</h1>
-</div>
+</a>
 
 <nav>
 
