@@ -1160,9 +1160,427 @@ modal.style.display='none';
 }
 
 }
+<style>
+
+/* ===== FORM BÁO GIÁ ===== */
+
+.quote-wrap{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.quote-info{
+background:#1a1a1a;
+padding:30px;
+border-radius:15px;
+border:1px solid #222;
+}
+
+.quote-info h3{
+color:#d4af37;
+margin-bottom:20px;
+}
+
+.quote-info p{
+margin-bottom:12px;
+line-height:1.8;
+}
+
+.quote-form{
+background:#1a1a1a;
+padding:30px;
+border-radius:15px;
+border:1px solid #222;
+}
+
+.quote-form input,
+.quote-form textarea{
+
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:none;
+outline:none;
+border-radius:8px;
+background:#111;
+color:#fff;
+}
+
+.quote-form textarea{
+height:140px;
+resize:none;
+}
+
+.quote-form button{
+width:100%;
+padding:15px;
+border:none;
+background:#d4af37;
+color:#111;
+font-weight:bold;
+cursor:pointer;
+border-radius:8px;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+background:#000;
+padding:60px 0 30px;
+border-top:1px solid #222;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.footer-box h3{
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.footer-box p,
+.footer-box a{
+color:#ccc;
+text-decoration:none;
+display:block;
+margin-bottom:10px;
+line-height:1.7;
+}
+
+.map iframe{
+width:100%;
+height:250px;
+border:none;
+border-radius:10px;
+}
+
+.copyright{
+text-align:center;
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid #222;
+color:#777;
+}
+
+/* ===== SOCIAL FLOAT ===== */
+
+.social{
+position:fixed;
+right:20px;
+bottom:20px;
+display:flex;
+flex-direction:column;
+gap:12px;
+z-index:999;
+}
+
+.social a{
+width:55px;
+height:55px;
+border-radius:50%;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.4);
+}
+
+.social img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.social a:hover{
+transform:scale(1.1);
+}
+
+/* ===== TOP BUTTON ===== */
+
+.top-btn{
+position:fixed;
+left:20px;
+bottom:20px;
+width:50px;
+height:50px;
+background:#d4af37;
+color:#111;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+border-radius:50%;
+cursor:pointer;
+z-index:999;
+display:none;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:900px){
+
+.quote-wrap{
+grid-template-columns:1fr;
+}
+
+.hero h2{
+font-size:34px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.logo h1{
+font-size:18px;
+}
+
+.hotline{
+display:none;
+}
+
+}
+
+</style>
+
+<!-- ===== BÁO GIÁ ===== -->
+
+<section id="baogia">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>YÊU CẦU BÁO GIÁ</h2>
+
+<p>Gửi thông tin, chúng tôi sẽ liên hệ sớm nhất</p>
+
+</div>
+
+<div class="quote-wrap">
+
+<div class="quote-info">
+
+<h3>THÔNG TIN LIÊN HỆ</h3>
+
+<p>
+📍 Lô 10 Khu Công Nghiệp Tây Bắc Ga,
+Phường Hàm Rồng,
+TP Thanh Hóa,
+Tỉnh Thanh Hóa
+</p>
+
+<p>
+📞 Hotline: 0976 036 631
+</p>
+
+<p>
+✉ Email:
+nguyendunghuyen100690@gmail.com
+</p>
+
+<p>
+✓ Báo giá nhanh
+</p>
+
+<p>
+✓ Gia công theo yêu cầu
+</p>
+
+<p>
+✓ Hỗ trợ tận nơi
+</p>
+
+</div>
+
+<div class="quote-form">
+
+<form onsubmit="sendQuote(event)">
+
+<input
+type="text"
+placeholder="Họ và tên"
+required>
+
+<input
+type="tel"
+placeholder="Số điện thoại"
+required>
+
+<input
+type="text"
+placeholder="Sản phẩm cần báo giá">
+
+<textarea
+placeholder="Nội dung yêu cầu">
+</textarea>
+
+<button type="submit">
+GỬI YÊU CẦU
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== FOOTER ===== -->
+
+<footer id="lienhe">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-box">
+
+<h3>INOX AN HƯNG</h3>
+
+<p>
+Chuyên sản xuất nắp bể inox,
+bể nước inox,
+lan can inox,
+cầu thang inox,
+máng xối inox
+và gia công inox theo yêu cầu.
+</p>
+
+</div>
+
+<div class="footer-box">
+
+<h3>THÔNG TIN</h3>
+
+<p>
+📞 0976036631
+</p>
+
+<p>
+✉ nguyendunghuyen100690@gmail.com
+</p>
+
+<p>
+📍 Lô 10 KCN Tây Bắc Ga,
+Phường Hàm Rồng,
+TP Thanh Hóa
+</p>
+
+<a href="https://zalo.me/4076776927681495659">
+Zalo
+</a>
+
+<a href="https://www.facebook.com/inoxanhungthanhhoa/">
+Facebook
+</a>
+
+</div>
+
+<div class="footer-box map">
+
+<h3>BẢN ĐỒ</h3>
+
+<iframe
+src="https://www.google.com/maps?q=19.8216857,105.7604043&z=16&output=embed">
+</iframe>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2025 INOX AN HƯNG.
+All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- ===== SOCIAL ===== -->
+
+<div class="social">
+
+<a href="tel:0976036631">
+<img src="phone.png">
+</a>
+
+<a href="https://zalo.me/4076776927681495659">
+<img src="zalo.png">
+</a>
+
+<a href="https://www.facebook.com/inoxanhungthanhhoa/">
+<img src="facebook.png">
+</a>
+
+</div>
+
+<!-- ===== TOP ===== -->
+
+<div
+class="top-btn"
+id="topBtn">
+↑
+</div>
+
+<script>
+
+/* FORM */
+
+function sendQuote(e){
+
+e.preventDefault();
+
+alert(
+'Cảm ơn quý khách. Chúng tôi sẽ liên hệ sớm nhất!'
+);
+
+}
+
+/* TOP BUTTON */
+
+const topBtn =
+document.getElementById('topBtn');
+
+window.addEventListener(
+'scroll',
+function(){
+
+if(window.scrollY>400){
+
+topBtn.style.display='flex';
+
+}else{
+
+topBtn.style.display='none';
+
+}
+
+}
+);
+
+topBtn.onclick=function(){
+
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+
+};
 
 </script>
 
+</body>
+</html>
+
+</script>
 
 </style>
 
