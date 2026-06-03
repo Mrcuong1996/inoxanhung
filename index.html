@@ -3,115 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Header Inox An Hưng</title>
+<title>Inox An Hưng</title>
 
 <style>
 
-/* ===== BASE ===== */
+/* ================= RESET ================= */
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
+/* ================= BODY ================= */
 body{
-padding-top:80px; /* tránh bị header che */
-background:#111;
+  background:#111;
+  color:#fff;
+  padding-top:80px; /* tránh bị header che */
 }
 
-/* ===== HEADER ===== */
+/* ================= HEADER ================= */
 .header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:#000;
-border-bottom:1px solid #d4af37;
-z-index:999;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#000;
+  border-bottom:1px solid #d4af37;
+  z-index:999;
+  box-shadow:0 2px 10px rgba(0,0,0,0.4);
 }
 
 .header-inner{
-max-width:1200px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:10px 15px;
+  max-width:1200px;
+  margin:auto;
+  padding:12px 15px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 /* LOGO */
 .logo{
-display:flex;
-align-items:center;
-gap:10px;
-text-decoration:none;
-color:#d4af37;
-font-weight:bold;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
 }
 
 .logo img{
-height:38px;
-width:auto;
+  height:40px;
+  width:auto;
+}
+
+.logo span{
+  color:#d4af37;
+  font-weight:bold;
+  font-size:18px;
+  letter-spacing:0.5px;
 }
 
 /* MENU */
 .nav{
-display:flex;
-gap:18px;
+  display:flex;
+  gap:22px;
 }
 
 .nav a{
-color:#fff;
-text-decoration:none;
-font-size:14px;
-transition:.2s;
+  color:#fff;
+  text-decoration:none;
+  font-size:15px;
+  transition:0.2s;
 }
 
 .nav a:hover{
-color:#d4af37;
+  color:#d4af37;
 }
 
 /* HOTLINE */
 .hotline{
-background:#d4af37;
-color:#111;
-padding:8px 14px;
-border-radius:20px;
-font-weight:bold;
-text-decoration:none;
-white-space:nowrap;
+  background:#d4af37;
+  color:#111;
+  padding:10px 16px;
+  border-radius:30px;
+  font-weight:bold;
+  text-decoration:none;
+  transition:0.2s;
+  white-space:nowrap;
 }
 
-.hero { min-height: 500px; }
-
-.about-img img{
-  width:100%;
-  height:auto;
-  object-fit:cover;
+.hotline:hover{
+  transform:translateY(-2px);
 }
 
-/* MOBILE */
+/* MOBILE BUTTON */
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  background:none;
+  border:none;
+  color:#d4af37;
+  cursor:pointer;
+}
+
+/* ================= MOBILE ================= */
 @media(max-width:768px){
-.nav{display:none;}
-.logo span{font-size:14px;}
-.hotline{padding:6px 10px;font-size:13px;}
-.logo img{height:32px;} /* FIX logo nhỏ lại trên mobile */
-}
 
-  
+  .nav{
+    display:none;
+  }
+
+  .hotline{
+    display:none;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .logo img{
+    height:34px;
+  }
+
+  .logo span{
+    font-size:14px;
+  }
+}
 
 </style>
+
 </head>
 
 <body>
 
-<!-- ===== HEADER START ===== -->
+<!-- ================= HEADER ================= -->
 <header class="header">
 
   <div class="header-inner">
 
-    <!-- LOGO (click về home) -->
+    <!-- LOGO -->
     <a href="./" class="logo">
       <img src="logo.png" alt="Inox An Hưng">
       <span>INOX AN HƯNG</span>
@@ -131,688 +165,16 @@ white-space:nowrap;
       📞 0976 036 631
     </a>
 
+    <!-- MOBILE -->
+    <button class="menu-toggle">☰</button>
+
   </div>
 
 </header>
-<!-- ===== HEADER END ===== -->
 
-<!-- ===== HERO SECTION sẽ đặt ở đây ===== -->
-<!--
-<section class="hero">
-   HERO SECTION của bạn sẽ đặt ngay dưới header này
--->
-<!-- ===== HERO SECTION START ===== -->
+<!-- ================= CONTENT START ================= -->
+<!-- P2 sẽ bắt đầu từ đây -->
+<!-- ================= CONTENT END ================= -->
 
-<style>
-
-/* ===== HERO ===== */
-.hero{
-height:90vh;
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-url('BANNER.jpg');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:#fff;
-}
-
-.hero-inner{
-max-width:900px;
-padding:20px;
-}
-
-.hero h1{
-font-size:42px;
-color:#d4af37;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:18px;
-color:#ddd;
-margin-bottom:25px;
-line-height:1.6;
-}
-
-/* BUTTON */
-.hero-btns{
-display:flex;
-gap:12px;
-justify-content:center;
-flex-wrap:wrap;
-}
-
-.btn{
-padding:12px 20px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-transition:.2s;
-}
-
-.btn-gold{
-box-shadow: 0 5px 15px rgba(212,175,55,0.4);
-background:#d4af37;
-color:#111;
-}
-
-.btn-outline{
-border:2px solid #d4af37;
-color:#d4af37;
-}
-
-.btn:hover{
-transform:translateY(-2px);
-}
-
-/* MOBILE */
-@media(max-width:768px){
-.hero h1{font-size:26px;}
-.hero p{font-size:15px;}
-}
-
-</style>
-
-<section class="hero">
-
-  <div class="hero-inner">
-
-    <h1>GIA CÔNG INOX THEO YÊU CẦU</h1>
-
-    <p>
-      Nắp bể inox • Nhà Bếp inox • Cầu thang inox • Máng xối inox  
-      <br>
-      Giá xưởng - Thi công tận nơi - Bảo hành rõ ràng
-    </p>
-
-    <div class="hero-btns">
-
-      <a href="tel:0976036631" class="btn btn-gold">
-        📞 GỌI NGAY
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ===== HERO SECTION END ===== -->
-
-  <!-- ===== ABOUT SECTION START ===== -->
-
-<style>
-.about{
-padding:70px 0;
-background:#111;
-color:#fff;
-}
-
-.about-container{
-max-width:1200px;
-margin:auto;
-width:95%;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-/* IMAGE */
-.about-img img{
-width:100%;
-border-radius:12px;
-display:block;
-}
-
-/* TEXT */
-.about-text h2{
-font-size:32px;
-color:#d4af37;
-margin-bottom:15px;
-}
-
-.about-text p{
-color:#ddd;
-line-height:1.7;
-margin-bottom:12px;
-}
-
-/* BOX */
-.about-boxes{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-margin-top:20px;
-}
-
-.about-box{
-background:#1a1a1a;
-padding:12px;
-border-radius:10px;
-text-align:center;
-border:1px solid #222;
-}
-
-.about-box b{
-color:#d4af37;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-.about-container{
-grid-template-columns:1fr;
-}
-.about-text h2{
-font-size:24px;
-}
-}
-
-  
-/* ===== phần 4 ===== */
-/* ===== BENEFITS ===== */
-.benefits{
-padding:70px 0;
-background:#0f0f0f;
-color:#fff;
-}
-
-.benefits-container{
-max-width:1200px;
-margin:auto;
-width:95%;
-}
-
-.benefits-title{
-text-align:center;
-margin-bottom:40px;
-}
-
-.benefits-title h2{
-color:#d4af37;
-font-size:32px;
-margin-bottom:10px;
-}
-
-.benefits-title p{
-color:#aaa;
-}
-
-/* GRID */
-.benefits-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-/* ITEM */
-.benefit-item{
-background:#1a1a1a;
-padding:20px;
-border-radius:12px;
-text-align:center;
-border:1px solid #222;
-transition:.2s;
-}
-
-.benefit-item:hover{
-transform:translateY(-5px);
-border-color:#d4af37;
-}
-
-.benefit-item h3{
-color:#d4af37;
-margin-bottom:10px;
-font-size:18px;
-}
-
-.benefit-item p{
-color:#ccc;
-line-height:1.6;
-font-size:14px;
-}
-
-/* ICON CIRCLE */
-.benefit-icon{
-width:50px;
-height:50px;
-margin:0 auto 15px;
-border-radius:50%;
-background:#d4af37;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:bold;
-color:#111;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-.benefits-title h2{
-font-size:24px;
-}
-}
-
-  /* ===== PRODUCTS WITH IMAGE ===== */
-
-.products-container{
-max-width:1200px;
-margin:auto;
-width:95%;
-}
-
-.products-title{
-text-align:center;
-margin-bottom:40px;
-}
-
-.products-title h2{
-color:#d4af37;
-font-size:32px;
-margin-bottom:10px;
-}
-
-.products-title p{
-color:#aaa;
-}
-
-.products-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-/* CARD */
-.product-item{
-background:#1a1a1a;
-border-radius:12px;
-overflow:hidden;
-border:1px solid #222;
-transition:.2s;
-}
-
-
-.product-item img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    display:block;
-}
-
-.product-item:hover{
-transform:translateY(-5px);
-border-color:#d4af37;
-}
-
-
-
-/* TEXT */
-.product-item h3{
-color:#d4af37;
-margin:12px 12px 6px;
-font-size:18px;
-}
-
-.product-item p{
-color:#ccc;
-font-size:14px;
-line-height:1.5;
-padding:0 12px 15px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-.products-title h2{
-font-size:24px;
-}
-}
-
-
-/* ===== PROJECTS ===== */
-.projects{
-padding:70px 0;
-background:#0f0f0f;
-color:#fff;
-}
-
-  /* IMAGE */
-  .project-item img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  display:block;
-}
-
-.projects-container{
-max-width:1200px;
-margin:auto;
-width:95%;
-}
-
-.projects-title{
-text-align:center;
-margin-bottom:40px;
-}
-
-.projects-title h2{
-color:#d4af37;
-font-size:32px;
-margin-bottom:10px;
-}
-
-.projects-title p{
-color:#aaa;
-}
-
-
-
-.project-list{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:20px;
-}
-
-.project-item{
-  width:100%;
-  max-width:1000px;
-  background:#fff;
-  border-radius:12px;
-  overflow:hidden;
-}
-
-.project-item img{
-  width:100%;
-  height:220px; /* hoặc 200px tùy thiết kế */
-  object-fit:cover;
-  display:block;
-  background:#fff; /* cho ảnh PDF trắng */
-}
-
-.project-item:hover{
-transform:translateY(-5px);
-border-color:#d4af37;
-}
-
-
-.project-item h3{
-padding:12px;
-font-size:16px;
-color:#d4af37;
-}
-
-@media(max-width:768px){
-.projects-title h2{
-font-size:24px;
-}
-}
-  
-</style>
-
-<section class="about" id="gioithieu">
-
-  <div class="about-container">
-
-    <!-- IMAGE -->
-    <div class="about-img">
-      <img src="11.jpg" alt="Inox An Hưng">
-    </div>
-
-    <!-- TEXT -->
-    <div class="about-text">
-
-      <h2>VỀ INOX AN HƯNG</h2>
-
-      <p>
-        Công ty CP TM & SX An Hưng chuyên gia công và sản xuất inox tại Thanh Hóa.
-        Chúng tôi cung cấp các sản phẩm inox dân dụng và công nghiệp với chất lượng cao.
-      </p>
-
-      <p>
-        Sản phẩm chính gồm: nắp bể inox, bể nước inox, lan can inox, cầu thang inox,
-        máng xối inox và gia công theo yêu cầu.
-      </p>
-
-      <p>
-        Cam kết: vật liệu chuẩn inox 304, thi công chính xác, giá tận xưởng và bảo hành rõ ràng.
-      </p>
-
-      <!-- HIGHLIGHT -->
-      <div class="about-boxes">
-
-        <div class="about-box">
-          <b>10+ năm</b><br>kinh nghiệm
-        </div>
-
-        <div class="about-box">
-          <b>1000+</b><br>công trình
-        </div>
-
-        <div class="about-box">
-          <b>Giá xưởng</b><br>không qua trung gian
-        </div>
-
-        <div class="about-box">
-          <b>Bảo hành</b><br>rõ ràng
-        </div>
-
-      </div>
-
-    </div>
-
-</div>
-  
-<!-- ===== ABOUT SECTION END ===== -->
-
-</section>
-
-<!-- ===== BENEFITS START ===== -->
-<section class="benefits">
-
-  <div class="benefits-container">
-
-    <!-- TITLE -->
-    <div class="benefits-title">
-      <h2>LÝ DO CHỌN CHÚNG TÔI</h2>
-      <p>Những giá trị tạo nên uy tín Inox An Hưng</p>
-    </div>
-
-    <!-- GRID -->
-    <div class="benefits-grid">
-
-      <div class="benefit-item">
-        <div class="benefit-icon">✓</div>
-        <h3>Inox chất lượng cao</h3>
-        <p>Sử dụng inox 304 bền đẹp, chống gỉ sét tốt.</p>
-      </div>
-
-      <div class="benefit-item">
-        <div class="benefit-icon">💰</div>
-        <h3>Giá tận xưởng</h3>
-        <p>Không qua trung gian, giá cạnh tranh nhất thị trường.</p>
-      </div>
-
-      <div class="benefit-item">
-        <div class="benefit-icon">⚙️</div>
-        <h3>Gia công chính xác</h3>
-        <p>Đúng kỹ thuật, đúng kích thước theo yêu cầu.</p>
-      </div>
-
-      <div class="benefit-item">
-        <div class="benefit-icon">🚀</div>
-        <h3>Thi công nhanh</h3>
-        <p>Đảm bảo tiến độ, hỗ trợ lắp đặt tận nơi.</p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ===== BENEFITS END ===== -->
-
-<!-- ===== PRODUCTS / SERVICES START ===== -->
-<section class="products" id="sanpham">
-
-  <div class="products-container">
-
-    <!-- TITLE -->
-    <div class="products-title">
-      <h2>SẢN PHẨM / DỊCH VỤ</h2>
-      <p>Các hạng mục gia công inox tại An Hưng</p>
-    </div>
-
-    <!-- GRID -->
-    <div class="products-grid">
-
-      <!-- ITEM -->
-      <div class="product-item">
-        <img src="4.jpg" alt="Nắp bể inox">
-        <h3>Nắp bể inox</h3>
-        <p>Thiết kế theo kích thước, chịu lực tốt, bền đẹp.</p>
-      </div>
-
-      <div class="product-item">
-        <img src="5.jpg" alt="Bể nước inox">
-        <h3>Bể nước inox</h3>
-        <p>Inox 304 an toàn, chống gỉ tuyệt đối, tuổi thọ cao.</p>
-      </div>
-
-      <div class="product-item">
-        <img src="3.jpg" alt="Cầu thang inox">
-        <h3>Cầu thang inox</h3>
-        <p>Thi công chắc chắn, thẩm mỹ cao cho nhà ở & công trình.</p>
-      </div>
-
-      <div class="product-item">
-        <img src="2.jpg" alt="Lan can inox">
-        <h3>Lan can inox</h3>
-        <p>Kiểu dáng hiện đại, độ bền cao, an toàn sử dụng.</p>
-      </div>
-
-      <div class="product-item">
-        <img src="6.jpg" alt="Máng xối inox">
-        <h3>Máng xối inox</h3>
-        <p>Chống ăn mòn, thoát nước tốt, phù hợp mọi công trình.</p>
-      </div>
-
-      <div class="product-item">
-        <img src="7.jpg" alt="Gia công inox">
-        <h3>Gia công theo yêu cầu</h3>
-        <p>Nhận thiết kế và sản xuất theo bản vẽ riêng.</p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-<!-- ===== PRODUCTS / SERVICES END ===== -->
-
-  <!-- ===== PROJECTS / WORKS START ===== -->
-<!-- ===== PROJECTS START ===== -->
-
-<style>
-
-.projects{
-padding:70px 0;
-background:#111;
-color:#fff;
-}
-
-.projects-container{
-max-width:1200px;
-width:95%;
-margin:auto;
-}
-
-.projects-title{
-text-align:center;
-margin-bottom:40px;
-}
-
-.projects-title h2{
-font-size:32px;
-color:#d4af37;
-margin-bottom:10px;
-}
-
-.projects-title p{
-color:#aaa;
-}
-
-/* LIST */
-.project-list{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-  align-items:center;
-}
-
-.project-item{
-  width:100%;
-  max-width:1100px;
-  border-radius:12px;
-  overflow:hidden;
-}
-
-
-/* ITEM */
-.project-item{
-overflow:hidden;
-border-radius:12px;
-background:#1a1a1a;
-border:1px solid #222;
-}
-
-.project-item:hover img{
-transform:scale(1.05);
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-.projects-title h2{
-font-size:24px;
-}
-
-.projects-grid{
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-}
-
-}
-
-</style>
-
-<section class="projects" id="congtrinh">
-
-  <div class="projects-container">
-
-    <div class="projects-title">
-      <h2>CÔNG TRÌNH THỰC TẾ</h2>
-      <p>Một số hình ảnh thực tế</p>
-    </div>
-
-    <div class="project-list">
-
-      <div class="project-item"><img src="sp1.jpg" alt="Công trình inox"></div>
-      <div class="project-item"><img src="sp2.jpg" alt="Công trình inox"></div>
-      <div class="project-item"><img src="sp3.jpg" alt="Công trình inox"></div>
-      <div class="project-item"><img src="sp4.jpg" alt="Công trình inox"></div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ===== PROJECTS END ===== -->
-<!-- ===== PROJECTS END ===== -->
-  
 </body>
 </html>
